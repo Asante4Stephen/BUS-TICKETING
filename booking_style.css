@@ -18,7 +18,11 @@ h1 {
 }
 
 form {
-    margin-top: 20px;
+  margin-top: 45px;
+  background-color: white;
+  margin-left: -119px;
+  margin-right: 52px;
+  padding: 25px 39px;
 }
 
 label {
@@ -44,12 +48,7 @@ button {
     display: flex;
 }
 .wrapper .hidden {
-<<<<<<< HEAD:booking_style.css
-    display: ;  
-=======
     display:none ;
-
->>>>>>> b34eeec8dc7c827cbdf3b27db91ffe70939d9d54:style.css
 }
 
 #booking-details {
