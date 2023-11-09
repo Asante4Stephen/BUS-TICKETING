@@ -44,7 +44,7 @@ button {
     display: flex;
 }
 .wrapper .hidden {
-    display: ;
+    /* display: ; */
 
 #booking-details {
     display: none;
