@@ -1,6 +1,4 @@
 
-
-
 // JavaScript code for fetching bus data and handling user interactions
 function searchBuses() {
     // Fetch available buses based on user input
@@ -25,10 +23,13 @@ function searchBuses() {
         </ul>`;
         busSearchResults.style.display = 'block';;
         busSearchResults.style.margin = 'auto';
-        busSearchResults.style.padding = '10px';
+        busSearchResults.style.padding = 'auto';
         busSearchResults.style.border = '1px solid black';
         busSearchResults.style.background = 'white';
         busSearchResults.style.borderRadius = '10px';
+
+        window.location.href="/1.html"
+
         
             // <li>Bus A - Price: $50 <button onclick="selectSeats('Bus A')">Select Seats</button></li>
 }
@@ -37,6 +38,11 @@ function searchBuses() {
 function selectSeats(busName) {
     const busSearchResults = document.getElementById('bus-search-results');
     busSearchResults.style.display = 'block';
+    busSearchResults.style.margin = 'auto';
+    busSearchResults.style.padding = '10px';
+    busSearchResults.style.border = '1px solid black';
+    busSearchResults.style.background = 'white';
+    busSearchResults.style.borderRadius = '10px';
 
     const seatSelection = document.getElementById('seat-selection');
     seatSelection.innerHTML = `<h2>Seat Selection for ${busName}</h2>
@@ -54,7 +60,7 @@ function selectSeats(busName) {
     " >Proceed to Payment</button>`;
     seatSelection.style.display = 'block';
     seatSelection.style.margin = 'auto';
-    seatSelection.style.padding = '10px';
+    seatSelection.style.padding = 'auto';
     seatSelection.style.border = '1px solid black';
     seatSelection.style.background = 'white';
     seatSelection.style.borderRadius = '10px';
@@ -69,12 +75,20 @@ function selectSeats(busName) {
         // </select>
 
         // <button onclick="proceedToPayment('${busName}')">Proceed to Payment</button>`;
+
+        window.location.href="2.html"
+        
 }
 
 // Function to handle payment options
 function proceedToPayment(busName) {
     const seatSelection = document.getElementById('seat-selection');
     seatSelection.style.display = 'block';
+    seatSelection.style.margin = 'auto';
+    seatSelection.style.padding = 'auto';
+    seatSelection.style.border = '1px solid black';
+    seatSelection.style.background = 'white';
+    seatSelection.style.borderRadius = '10px';
 
     const paymentOptions = document.getElementById('payment-options');
     paymentOptions.innerHTML = `<h2>Payment Options</h2>
@@ -89,11 +103,16 @@ function proceedToPayment(busName) {
         border: groove black 2px
         "
         >Confirm Booking</button>`;
+        paymentOptions.style.display = 'block';
+        
+        window.location.href="3.html"
+        
+        
 }
 
 // Function to confirm the booking
 function confirmBooking(busName) {
-    const paymentOptions = document.getElementById('payment-options');
+    const paymentOptions = document.getElementById('confirmation');
     paymentOptions.style.display = 'block';
 
     // You can implement actual payment processing here
@@ -105,6 +124,8 @@ function confirmBooking(busName) {
         <p>An e-ticket has been sent to your email.</p>`;
     
     document.body.appendChild(confirmationMessage);
+    window.location.href="4.html"
+        
 }
 
 

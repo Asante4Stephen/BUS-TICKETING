@@ -20,9 +20,11 @@ h1 {
 form {
   margin-top: 45px;
   background-color: white;
-  margin-left: -119px;
-  margin-right: 52px;
+  /* margin-left: -119px; */
+  /* margin-right: 52px; */
   padding: 25px 39px;
+  width: 100%;
+  max-width: 560px;
 }
 
 label {
@@ -44,12 +46,15 @@ button {
     cursor: pointer;
 }
 
-.wrapper {
+ .wrapper {
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.wrapper .hidden {
+/*.wrapper .hidden {
     display:none ;
-}
+} */
+
 
 #booking-details {
     display: none;
