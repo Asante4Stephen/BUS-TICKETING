@@ -44,7 +44,12 @@ button {
     display: flex;
 }
 .wrapper .hidden {
+<<<<<<< HEAD:booking_style.css
     display: ;  
+=======
+    display:none ;
+
+>>>>>>> b34eeec8dc7c827cbdf3b27db91ffe70939d9d54:style.css
 }
 
 #booking-details {
