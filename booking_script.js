@@ -217,26 +217,26 @@ function confirmBooking(busName) {
         
 }
 
-document.getElementById('saveButton').addEventListener('click', function() {
-    const fullname = document.getElementById('fullName').value;
-    const companies = document.getElementById('companies').value;
-    const location = document.getElementById('location').value;
-    const passenger = document.getElementById('passenger').value;
-    const depDate = document.getElementById('depDate').value;
-    const depTime = document.getElementById('depTime').value;
+// document.getElementById('saveButton').addEventListener('click', function() {
+//     const fullname = document.getElementById('fullName').value;
+//     const companies = document.getElementById('companies').value;
+//     const location = document.getElementById('location').value;
+//     const passenger = document.getElementById('passenger').value;
+//     const depDate = document.getElementById('depDate').value;
+//     const depTime = document.getElementById('depTime').value;
 
-    // Save values to local storage
-    localStorage.setItem('fullName', fullname);
-    localStorage.setItem('companies', companies);
-    localStorage.setItem('location', location);
-    localStorage.setItem('passenger', passenger);
-    localStorage.setItem('depDate', depDate);
-    localStorage.setItem('depTime', depTime);
+//     // Save values to local storage
+//     localStorage.setItem('fullName', fullname);
+//     localStorage.setItem('companies', companies);
+//     localStorage.setItem('location', location);
+//     localStorage.setItem('passenger', passenger);
+//     localStorage.setItem('depDate', depDate);
+//     localStorage.setItem('depTime', depTime);
 
-    // alert('Data saved to local storage.');
-});
+//     // alert('Data saved to local storage.');
+// });
 
-document.getElementById('printButton').addEventListener('click', function() {
+document.getElementById('printButton')?.addEventListener('click', function() {
     // Retrieve values from local storage
     const storedFullName = localStorage.getItem('fullName');
     const storedCompanies = localStorage.getItem('companies');
