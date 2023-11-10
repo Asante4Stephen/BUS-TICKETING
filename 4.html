@@ -31,10 +31,52 @@
         <button onclick="window.print()"
         style="
         color: #fff;
-        width: 40%;
+        width: 30%;
         border-radius: 5px;
         "
-        >Print this page</button>`;
+        >Print your ticket</button><br>
+        <table border=1 width=300 height=250>
+            <tr>
+                <th colspan='2'>Customer Details</th>
+            </tr>
+            <tr>
+                <td>Full Name :</td>
+                <td>${localStorage.getItem("name")}</td>
+                </tr>
+        
+            
+            <tr>
+                <td>Location:</td>
+                <td>${localStorage.getItem("city")}</td>
+                </tr>
+        
+            <tr>
+                <td>Date of Departure:</td>
+                <td>${localStorage.getItem("dateOfDeparture")}</td>
+            </tr>
+            <tr>
+                <td>Time of Departure:</td>
+                <td>${localStorage.getItem("timeOfDeparture")}</td>
+            </tr>
+            <tr>
+                <td>Company:</td>
+                <td>${localStorage.getItem("company")}</td>
+            </tr>
+            <tr>
+                <td>Seat number:</td>
+                <td>${localStorage.getItem("seatNo")}</td>
+            </tr>
+            <tr>
+                <td>Payment Option:</td>
+                <td>${localStorage.getItem("paymentOption")}</td>
+            </tr>
+            <tr>
+                
+           
+        </table>
+        
+
+        `;
         confirmationMessage.style.display = 'block';
         confirmationMessage.style.margin = 'auto';
         confirmationMessage.style.padding = 'auto';

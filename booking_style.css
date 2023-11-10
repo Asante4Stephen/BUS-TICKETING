@@ -2,6 +2,7 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     margin: 0 200px;
+    
 }
 
 /* .container {
@@ -101,10 +102,10 @@ button {
   
   #bus-search-results li button {
     background-color: var(--color-primary);
-    color: #fff;
+    color: #0a0a0a;
     font-size: 1.4rem;
     padding: 0.5rem 1rem;
-    border: none;
+    border:groove;
     border-radius: 0.5rem;
     cursor: pointer;
     transition: background-color 0.3s;
