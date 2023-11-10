@@ -29,12 +29,11 @@
     document.addEventListener('DOMContentLoaded', function () {
         const formData = JSON.parse(localStorage.getItem("ticketFormData"));
 
-       const userData =  localStorage.getItem("ticketFormData")
+       let userData =  localStorage.getItem("ticketFormData")
        document.getElementById("userData").innerText = userData
 
-       console.log( JSON.parse(userData)
-)
-
+       userData = JSON.parse(userData)
+console.log({userData});
 
 
 
@@ -52,47 +51,44 @@
         border: 1px solid #fff;
         "
         >Print your ticket</button><br>
+        <div>
         <table border=1 width=300 height=250>
             <tr>
                 <th colspan='2'>Customer Details</th>
             </tr>
             <tr>
                 <td>Full Name :</td>
-                <td>${localStorage.getItem("name")}</td>
+                <td>${userData.fullname}</td>
                 </tr>
         
             
             <tr>
                 <td>Location:</td>
-                <td>${localStorage.getItem("city")}</td>
+                <td>${userData.location}</td>
                 </tr>
         
             <tr>
                 <td>Date of Departure:</td>
-                <td>${localStorage.getItem("dateOfDeparture")}</td>
+                <td>${userData.depDate}</td>
             </tr>
             <tr>
                 <td>Time of Departure:</td>
-                <td>${localStorage.getItem("timeOfDeparture")}</td>
+                <td>${userData.depTime}</td>
             </tr>
             <tr>
                 <td>Company:</td>
-                <td>${localStorage.getItem("company")}</td>
+                <td>${userData.companies}</td>
             </tr>
             <tr>
-                <td>Seat number:</td>
-                <td>${localStorage.getItem("seatNo")}</td>
+                <td>Tickets number:</td>
+                <td>${userData.passenger}</td>
             </tr>
-            <tr>
-                <td>Payment Option:</td>
-                <td>${localStorage.getItem("paymentOption")}</td>
-            </tr>
-            <tr>
+            
                 
            
         </table>
         
-
+</div>
         `;
         confirmationMessage.style.display = 'block';
         confirmationMessage.style.margin = 'auto';

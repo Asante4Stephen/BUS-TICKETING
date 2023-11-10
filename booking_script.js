@@ -20,7 +20,10 @@ function searchBuses() {
         location:location,
         passenger:passenger,
         depDate:depDate,
+        depTime:depTime
     }
+    
+    
 
     
     localStorage.setItem("ticketFormData", JSON.stringify(formData))
