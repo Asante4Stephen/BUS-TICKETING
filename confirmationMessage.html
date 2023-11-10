@@ -9,12 +9,14 @@
 <body>
    
       <!-- Confirmation -->
-      <div id="confirmation" class="hidden2"  style="display: block;
+      <div id="confirmation" class="hidden2" 
+       <!-- style="display: block;
       margin: 7px;
-      border: 1px solid black;
+      border: none;
       background: white;
       border-radius: 10px;
-      padding: 34px;">
+      padding: 100px;" -->
+        >
           <!-- Payment methods will be displayed here -->
       </div>
 
@@ -49,12 +51,49 @@
         margin: 10px;
         border: 1px solid #fff;
         "
-        >Print this page</button>`;
-        document.getElementById("printButton").addEventListener('click', BeforeUnloadEvent, 
-       "display: none"
+        >Print your ticket</button><br>
+        <table border=1 width=300 height=250>
+            <tr>
+                <th colspan='2'>Customer Details</th>
+            </tr>
+            <tr>
+                <td>Full Name :</td>
+                <td>${localStorage.getItem("name")}</td>
+                </tr>
         
-        )
+            
+            <tr>
+                <td>Location:</td>
+                <td>${localStorage.getItem("city")}</td>
+                </tr>
         
+            <tr>
+                <td>Date of Departure:</td>
+                <td>${localStorage.getItem("dateOfDeparture")}</td>
+            </tr>
+            <tr>
+                <td>Time of Departure:</td>
+                <td>${localStorage.getItem("timeOfDeparture")}</td>
+            </tr>
+            <tr>
+                <td>Company:</td>
+                <td>${localStorage.getItem("company")}</td>
+            </tr>
+            <tr>
+                <td>Seat number:</td>
+                <td>${localStorage.getItem("seatNo")}</td>
+            </tr>
+            <tr>
+                <td>Payment Option:</td>
+                <td>${localStorage.getItem("paymentOption")}</td>
+            </tr>
+            <tr>
+                
+           
+        </table>
+        
+
+        `;
         confirmationMessage.style.display = 'block';
         confirmationMessage.style.margin = 'auto';
         confirmationMessage.style.padding = 'auto';
