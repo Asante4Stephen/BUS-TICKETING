@@ -10,10 +10,10 @@
     <h1>Bus <span1 style="color: #5175e2;"> Ticket </span1> Booking</h1>
 <div class="wrapper hidden">
     <form class="modal__form">
-        <label>Full Name</label>
-        <input type="text" id="fullName"/>
-        <label>Company</label>
-        <input list="browsers" name="browser" id="companies">
+        <label>Full Name <span2>*</span2></label>
+        <input type="text" id="fullName" required>
+        <label>Company <span2>*</span2></label>
+        <input list="browsers" name="browser" id="companies"required>
     
           <datalist id="browsers">
           <option value=" STC Transports">
@@ -23,8 +23,8 @@
           <option value="FORD Transports">
           
           </datalist>
-        <label>Location</label>
-        <input list="locations" name="browser" id="location">
+        <label>Location <span2>*</span2></label>
+        <input list="locations" name="browser" id="location" required>
     
         <datalist id="locations">
           <option value="ACCRA">
@@ -35,13 +35,13 @@
           <option value="CAPE COAST">
           
         </datalist>
-        <label>Passengers</label>
-        <input type="number" id="passenger"/>
-        <label>Date</label>
-        <input type="date" id="depDate"/>
-        <label>Departure Time</label>
-        <input type="time" id="depTime"/>
-       <button type="button" onClick="searchBuses()" id="saveButton">Search Buses</button>
+        <label>Passengers <span2>*</span2></label>
+        <input type="number" id="passenger" required>
+        <label>Date <span2>*</span2></label>
+        <input type="date" id="depDate" required>
+        <label>Departure Time <span2>*</span2></label>
+        <input type="time" id="depTime" required>
+       <button type="submit" onClick="searchBuses()" id="saveButton">Search Buses</button>
       </form>
 
      

@@ -238,7 +238,10 @@ button:hover {
     color: var(--color-primary);
     margin-bottom: 1.5rem;
   }
-  
+  span2{
+    color: red !important;
+  }
+
   #confirmation p {
     font-size: 1.7rem;
     color: #444;
