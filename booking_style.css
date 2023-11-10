@@ -16,6 +16,7 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     margin: 0 200px;
+    
 }
 
 .container {
@@ -122,10 +123,10 @@ button:hover {
   
   #bus-search-results li button {
     background-color: var(--color-primary);
-    color: #111010;
+    color: #864444;
     font-size: 1.4rem;
     padding: 0.5rem 1rem;
-    border: gray groove;
+    border: none;
     border-radius: 0.5rem;
     cursor: pointer;
     transition: background-color 0.3s;

@@ -43,18 +43,64 @@
         <button onclick="window.print()" id="printButton"
         style="
         color: #fff;
-        width: 40%;
+        width: 30%;
         border-radius: 5px;
         padding: 10px;
         margin: 10px;
         border: 1px solid #fff;
         "
+<<<<<<< HEAD:confirmationMessage.html
         >Print this page</button>`;
         document.getElementById("printButton").addEventListener('click', BeforeUnloadEvent, 
        "display: none"
         
         )
         
+=======
+        >Print your ticket</button><br>
+        <table border=1 width=300 height=250>
+            <tr>
+                <th colspan='2'>Customer Details</th>
+            </tr>
+            <tr>
+                <td>Full Name :</td>
+                <td>${localStorage.getItem("name")}</td>
+                </tr>
+        
+            
+            <tr>
+                <td>Location:</td>
+                <td>${localStorage.getItem("city")}</td>
+                </tr>
+        
+            <tr>
+                <td>Date of Departure:</td>
+                <td>${localStorage.getItem("dateOfDeparture")}</td>
+            </tr>
+            <tr>
+                <td>Time of Departure:</td>
+                <td>${localStorage.getItem("timeOfDeparture")}</td>
+            </tr>
+            <tr>
+                <td>Company:</td>
+                <td>${localStorage.getItem("company")}</td>
+            </tr>
+            <tr>
+                <td>Seat number:</td>
+                <td>${localStorage.getItem("seatNo")}</td>
+            </tr>
+            <tr>
+                <td>Payment Option:</td>
+                <td>${localStorage.getItem("paymentOption")}</td>
+            </tr>
+            <tr>
+                
+           
+        </table>
+        
+
+        `;
+>>>>>>> 994ec5742e3db8d8343385cc33ea165b4dee3e0b:4.html
         confirmationMessage.style.display = 'block';
         confirmationMessage.style.margin = 'auto';
         confirmationMessage.style.padding = 'auto';
