@@ -9,7 +9,12 @@
 <body>
    
       <!-- Confirmation -->
-      <div id="confirmation" class="hidden2">
+      <div id="confirmation" class="hidden2"  style="display: block;
+      margin: 7px;
+      border: 1px solid black;
+      background: white;
+      border-radius: 10px;
+      padding: 34px;">
           <!-- Payment methods will be displayed here -->
       </div>
     
@@ -22,7 +27,14 @@
     const confirmationMessage = document.getElementById('confirmation');
     confirmationMessage.innerHTML = `<h2>Booking Confirmation</h2>
         <p>Your booking for  has been confirmed.</p>
-        <p>An e-ticket has been sent to your email.</p>`;
+        <p>An e-ticket has been sent to your email.</p>
+        <button onclick="window.print()"
+        style="
+        color: #fff;
+        width: 40%;
+        border-radius: 5px;
+        "
+        >Print this page</button>`;
         confirmationMessage.style.display = 'block';
         confirmationMessage.style.margin = 'auto';
         confirmationMessage.style.padding = 'auto';
@@ -34,6 +46,8 @@
     // document.body.appendChild(confirmationMessage);
 
         }, false);
+
+
     </script>
 
 
