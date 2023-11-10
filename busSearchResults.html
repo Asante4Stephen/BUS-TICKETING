@@ -33,7 +33,7 @@
 
 document.addEventListener('DOMContentLoaded', function () {
 
-    
+    const formData = JSON.parse(localStorage.getItem("ticketFormData"));
 
 
 const busSearchResults = document.getElementById('bus-search-results');
@@ -54,6 +54,15 @@ const busSearchResults = document.getElementById('bus-search-results');
         
 
 }, false);
+function selectSeats(busName) {
+            // Update the selected bus in the form data
+            const formData = JSON.parse(localStorage.getItem("ticketFormData"));
+            formData.selectedBus = busName;
+            localStorage.setItem("ticketFormData", JSON.stringify(formData));
+
+            // Redirect to seat selection page
+            window.location.href = "seatSelection.html";
+        }
     </script>
 </body>
 </html>

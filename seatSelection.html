@@ -21,6 +21,9 @@
 
 <script >
 document.addEventListener('DOMContentLoaded', function () {
+
+    const formData = JSON.parse(localStorage.getItem("ticketFormData"));
+
     const seatSelection = document.getElementById('seat-selection');
     seatSelection.innerHTML = `<h2>Seat Selection for </h2>
         <p>Select your seats:</p>
@@ -33,7 +36,9 @@ document.addEventListener('DOMContentLoaded', function () {
         </select>
         <button onclick="proceedToPayment('$}')" 
         style="color : black;
-        border: groove black 2px
+        border: groove black 2px;
+        margin: auto;
+        
         " >Proceed to Payment</button>`;
         seatSelection.style.display = 'block';
         seatSelection.style.margin = 'auto';
@@ -42,7 +47,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
         seatSelection.style.background = 'white';
         seatSelection.style.borderRadius = '10px';
+
+        
     }, false);
+
+    function proceedToPayment() {
+            // Redirect to payment options page
+            window.location.href = "paymentOptions.html";
+        }
 </script>
  
     <script src="booking_script.js"></script>

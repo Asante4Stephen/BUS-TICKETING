@@ -17,24 +17,44 @@
       padding: 34px;">
           <!-- Payment methods will be displayed here -->
       </div>
+
+      <div id="userData"></div>
     
     
   
 
   <script >
     document.addEventListener('DOMContentLoaded', function () {
-       
+        const formData = JSON.parse(localStorage.getItem("ticketFormData"));
+
+       const userData =  localStorage.getItem("ticketFormData")
+       document.getElementById("userData").innerText = userData
+
+       console.log( JSON.parse(userData)
+)
+
+
+
+
     const confirmationMessage = document.getElementById('confirmation');
     confirmationMessage.innerHTML = `<h2>Booking Confirmation</h2>
         <p>Your booking for  has been confirmed.</p>
         <p>An e-ticket has been sent to your email.</p>
-        <button onclick="window.print()"
+        <button onclick="window.print()" id="printButton"
         style="
         color: #fff;
         width: 40%;
         border-radius: 5px;
+        padding: 10px;
+        margin: 10px;
+        border: 1px solid #fff;
         "
         >Print this page</button>`;
+        document.getElementById("printButton").addEventListener('click', BeforeUnloadEvent, 
+       "display: none"
+        
+        )
+        
         confirmationMessage.style.display = 'block';
         confirmationMessage.style.margin = 'auto';
         confirmationMessage.style.padding = 'auto';

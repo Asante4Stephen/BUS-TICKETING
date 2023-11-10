@@ -1,16 +1,30 @@
+:root {
+  --color-primary: #7499f0;
+  --color-secondary: #ffcb03;
+  --color-tertiary: #ff585f;
+  --color-primary-darker: #2a65b3;
+  --color-secondary-darker: #ffbb00;
+  --color-tertiary-darker: #fd424b;
+  --color-primary-opacity: #5bacd73a;
+  --color-secondary-opacity: #ffcd0331;
+  --color-tertiary-opacity: #ff58602d;
+  --gradient-primary: linear-gradient(to top left, #fbfbfb, #0671f4);
+  --gradient-secondary: linear-gradient(to top left, #2003ff, #dae4ed);
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     margin: 0 200px;
 }
 
-/* .container {
+.container {
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
     background-color: #fff;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-} */
+}
 
 h1 {
     text-align: center;
@@ -41,16 +55,23 @@ select, input, button {
 
 button {
     background-color: #0074d9;
-    color: #fff;
+    color: #312e2e;
     border: none;
     cursor: pointer;
     width: 100%;
     margin-left: 12px;
 }
 
-#paymentBtn:hover{
-  background: #1649c900;
+button:hover {
+    opacity: 0.8;
+    transition: 0.3s;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    background-color: #000000;
 }
+
+/* #paymentBtn:hover{
+  background: #1649c900;
+} */
 
  .wrapper {
     display: flex;
@@ -101,14 +122,14 @@ button {
   
   #bus-search-results li button {
     background-color: var(--color-primary);
-    color: #fff;
+    color: #111010;
     font-size: 1.4rem;
     padding: 0.5rem 1rem;
-    border: none;
+    border: gray groove;
     border-radius: 0.5rem;
     cursor: pointer;
     transition: background-color 0.3s;
-  }
+}
   
   #bus-search-results li button:hover {
     background-color: var(--color-primary-darker);

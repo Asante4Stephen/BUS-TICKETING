@@ -12,8 +12,20 @@ function searchBuses() {
 
     // Perform an API request to get bus data and display results
     // You'd typically connect to a server for this.
-    window.location.href="1.html"
+    window.location.href="busSearchResults.html"
 
+    const formData = {
+        fullname:fullname,
+        companies:companies,
+        location:location,
+        passenger:passenger,
+        depDate:depDate,
+    }
+
+    
+    localStorage.setItem("ticketFormData", JSON.stringify(formData))
+
+    formData.fare = "GHS12.00"
     // Example: Display available buses
     const busSearchResults = document.getElementById('bus-search-results');
 
@@ -37,7 +49,19 @@ function searchBuses() {
 // Function to handle seat selection
 function selectSeats(busName) {
     
-    window.location.href="2.html"
+    window.location.href="seatSelection.html"
+    
+    localStorage.getItem("ticketFormData", JSON.parse(formData))
+    var ticketFormData = JSON.parse(localStorage.getItem("ticketFormData"));
+    ticketFormData["selectedBus"]=busName;
+    localStorage.setItem("ticketFormData", JSON.stringify(ticketFormData));
+
+    // Show selected seats page
+    
+    // let selectedBus = busName;
+    // let fare = 50;
+    formData.busName = busSearchResults.busName;
+
     
     
     const seatSelection = document.getElementById('seat-selection');
@@ -110,8 +134,30 @@ function selectSeats(busName) {
 // Function to handle payment options
 function proceedToPayment(busName) {
     
-    window.location.href="3.html"
+    window.location.href="paymentOptions.html"
 
+    localStorage.getItem("ticketFormData", JSON.parse(formData))
+    console.log(`Ticket Form Data: ${JSON.stringify(localStorage)}`);
+
+    var formData = {
+        name: name,
+        phoneNumber: phoneNumber,
+        emailAddress: emailAddress,
+        busName: busName,
+        selectedSeats: selectedSeats
+      };
+    // console.log(localStorage);
+
+    // let formData = JSON.stringify({
+    //     name: userName,
+    //     email: userEmail,
+    //     phoneNumber: userPhoneNum,
+    //     busName: busName,
+    //     selectedSeats: selectedSeats,
+    //     totalPrice: totalPrice
+    //   });
+      
+    localStorage.setItem("ticketFormData", formData);
     
     const paymentOptions = document.getElementById('payment-options');
     // paymentOptions.innerHTML = `<h2>Payment Options</h2>
@@ -153,7 +199,7 @@ function proceedToPayment(busName) {
 // Function to confirm the booking
 function confirmBooking(busName) {
     
-    window.location.href="4.html"
+    window.location.href="confirmationMessage.html"
 
 
     // You can implement actual payment processing here
@@ -168,6 +214,42 @@ function confirmBooking(busName) {
         
 }
 
+document.getElementById('saveButton').addEventListener('click', function() {
+    const fullname = document.getElementById('fullName').value;
+    const companies = document.getElementById('companies').value;
+    const location = document.getElementById('location').value;
+    const passenger = document.getElementById('passenger').value;
+    const depDate = document.getElementById('depDate').value;
+    const depTime = document.getElementById('depTime').value;
+
+    // Save values to local storage
+    localStorage.setItem('fullName', fullname);
+    localStorage.setItem('companies', companies);
+    localStorage.setItem('location', location);
+    localStorage.setItem('passenger', passenger);
+    localStorage.setItem('depDate', depDate);
+    localStorage.setItem('depTime', depTime);
+
+    // alert('Data saved to local storage.');
+});
+
+document.getElementById('printButton').addEventListener('click', function() {
+    // Retrieve values from local storage
+    const storedFullName = localStorage.getItem('fullName');
+    const storedCompanies = localStorage.getItem('companies');
+    const storedLocation = localStorage.getItem('location');
+    const storedPassenger = localStorage.getItem('passenger');
+    const storedDepDate = localStorage.getItem('depDate');
+    const storedDepTime = localStorage.getItem('depTime');
+
+    // Print values
+    console.log('Full Name:', storedFullName);
+    console.log('Companies:', storedCompanies);
+    console.log('Location:', storedLocation);
+    console.log('Passenger:', storedPassenger);
+    console.log('Departure Date:', storedDepDate);
+    console.log('Departure Time:', storedDepTime);
+});
 
 
 

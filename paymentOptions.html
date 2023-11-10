@@ -23,6 +23,9 @@
   
   <script >
     document.addEventListener('DOMContentLoaded', function () {
+
+      const formData = JSON.parse(localStorage.getItem("ticketFormData"));
+
       const paymentOptions = document.getElementById('payment-options');
     paymentOptions.innerHTML = `<h2>Payment Options</h2>
         <p>Choose a payment method:</p>
@@ -42,6 +45,13 @@
         paymentOptions.style.background = 'white';
         paymentOptions.style.borderRadius = '10px';
         }, false);
+
+        
+        function confirmBooking() {
+            // Redirect to confirmation page
+            window.location.href = "confirmationMessage.html";
+        }
+
     </script>
      
 
