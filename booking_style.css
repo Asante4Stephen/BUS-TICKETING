@@ -44,6 +44,12 @@ button {
     color: #fff;
     border: none;
     cursor: pointer;
+    width: 100%;
+    margin-left: 12px;
+}
+
+#paymentBtn:hover{
+  background: #1649c900;
 }
 
  .wrapper {

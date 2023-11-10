@@ -5,9 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="booking_style.css">
+
 </head>
 <body>
-  
+
+
+    
 
 <div id="bus-search-results" >
     
@@ -16,31 +19,6 @@
       
   </div>
 
-   <!-- Seat Selection -->
- <div id="seat-selection" >
-    <!-- Seat layout will be displayed here -->
-</div>
- 
-  <!-- Payment Options -->
-  <div id="payment-options" class="hidden2">
-      <!-- Payment methods will be displayed here -->
-  </div
-  <!-- Seat Selection -->
-  <div id="seat-selection" class="hidden2">
-      <!-- Seat layout will be displayed here -->
-  </div>
-
-  <!-- Payment Options -->
-  <div id="payment-options" class="hidden2">
-      <!-- Payment methods will be displayed here -->
-  </div>
-  <!-- Confirmation -->
-  <div id="confirmation" class="hidden2">
-      <!-- Payment methods will be displayed here -->
-  </div>
-
-
-</div>
 
 
 
@@ -48,6 +26,34 @@
 
 
 
-    <script src="booking_script.js"></script>
+
+
+    <script type="" src="./booking_script.js"></script>
+    <script>
+
+document.addEventListener('DOMContentLoaded', function () {
+
+    
+
+
+const busSearchResults = document.getElementById('bus-search-results');
+
+    busSearchResults.innerHTML = `<h2>Available Buses</h2>
+        <ul>
+            <li>Bus A - Price: $50 <button onclick="selectSeats('Bus A')">Select Seats</button></li>
+            <li>Bus B - Price: $60 <button onclick="selectSeats('Bus B')">Select Seats</button></li>
+            <li>Bus C - Price: $70 <button onclick="selectSeats('Bus C')">Select Seats</button></li>
+        </ul>`;
+        busSearchResults.style.display = 'block';;
+        busSearchResults.style.margin = 'auto';
+        busSearchResults.style.padding = 'auto';
+        busSearchResults.style.border = '1px solid black';
+        busSearchResults.style.background = 'white';
+        busSearchResults.style.borderRadius = '10px';
+
+        
+
+}, false);
+    </script>
 </body>
 </html>

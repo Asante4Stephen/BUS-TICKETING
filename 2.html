@@ -9,11 +9,41 @@
 <body>
    
 
+    
+    
+       <!-- Seat Selection -->
+     <div id="seat-selection" >
+        <!-- Seat layout will be displayed here -->
+    </div>
+     
+      
+    
 
-   <!-- Seat Selection -->
- <div id="seat-selection" >
-    <!-- Seat layout will be displayed here -->
-</div>
+<script >
+document.addEventListener('DOMContentLoaded', function () {
+    const seatSelection = document.getElementById('seat-selection');
+    seatSelection.innerHTML = `<h2>Seat Selection for </h2>
+        <p>Select your seats:</p>
+        <select id="selected-seats" multiple>
+        <option value="1A">1A</option>
+        <option value="1B">1B</option>
+        <option value="2A">2A</option>
+        <option value="2B">2B</option>
+        <!-- Add more seat options -->
+        </select>
+        <button onclick="proceedToPayment('$}')" 
+        style="color : black;
+        border: groove black 2px
+        " >Proceed to Payment</button>`;
+        seatSelection.style.display = 'block';
+        seatSelection.style.margin = 'auto';
+        seatSelection.style.padding = 'auto';
+        seatSelection.style.border = '1px solid black';
+
+        seatSelection.style.background = 'white';
+        seatSelection.style.borderRadius = '10px';
+    }, false);
+</script>
  
     <script src="booking_script.js"></script>
 </body>

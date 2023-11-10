@@ -8,12 +8,33 @@
 </head>
 <body>
    
-  <!-- Confirmation -->
-  <div id="confirmation" class="hidden2">
-      <!-- Payment methods will be displayed here -->
-  </div>
+      <!-- Confirmation -->
+      <div id="confirmation" class="hidden2">
+          <!-- Payment methods will be displayed here -->
+      </div>
+    
+    
   
 
+  <script >
+    document.addEventListener('DOMContentLoaded', function () {
+       
+    const confirmationMessage = document.getElementById('confirmation');
+    confirmationMessage.innerHTML = `<h2>Booking Confirmation</h2>
+        <p>Your booking for  has been confirmed.</p>
+        <p>An e-ticket has been sent to your email.</p>`;
+        confirmationMessage.style.display = 'block';
+        confirmationMessage.style.margin = 'auto';
+        confirmationMessage.style.padding = 'auto';
+        confirmationMessage.style.border = '1px solid black';
+        confirmationMessage.style.background = 'white';
+        confirmationMessage.style.borderRadius = '10px';
+
+    
+    // document.body.appendChild(confirmationMessage);
+
+        }, false);
+    </script>
 
 
 
