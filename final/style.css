@@ -587,13 +587,12 @@ h4 {
 
 /* MODAL WINDOW */
 .modal {
-  position: fixed;
-  top: 50%;
+  position: absolute;
+  top: 53%;
   left: 50%;
   transform: translate(-50%, -50%);
-  max-width: 60rem;
   background-color: #f3f3f3;
-  padding: 5rem 6rem;
+  padding: 2rem 4rem;
   box-shadow: 0 4rem 6rem rgba(0, 0, 0, 0.3);
   z-index: 1000;
   transition: all 0.5s;
@@ -618,17 +617,16 @@ h4 {
 }
 
 .modal__form {
-  /* margin: -37px -2rem; */
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 30fr 30fr;
   align-items: center;
-  gap: 2.5rem;
+  gap: 1.5rem;
   justify-content: center;
-  margin-top: 45px;
-  background-color: white;
-  padding: 25px 39px;
+  padding: 0 0;
   width: 100%;
   max-width: 560px;
+  align-content: center;
+  justify-items: start;
 }
 
 .modal__form label {
@@ -880,4 +878,10 @@ textarea#area{
 
 
 
-booking css
+/* booking css */
+
+#form5Container{
+  display: flex;
+  justify-content: space-around;
+  column-gap: 1.5rem;
+}
