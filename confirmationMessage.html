@@ -37,11 +37,9 @@
        userData = JSON.parse(userData)
 
 
-
-
     const confirmationMessage = document.getElementById('confirmation');
     confirmationMessage.innerHTML = `<h2>Booking Confirmation</h2>
-        <p>Your booking for  has been confirmed.</p>
+        <p>Your booking for bus has been confirmed.</p>
         <p>An e-ticket has been sent to your email.</p>
         <button onclick="window.print()" id="printButton"
         style="
@@ -54,45 +52,55 @@
         "
         >Print your ticket</button><br>
         <div>
-        <table border=1 width=300 height=250>
-            <tr>
+        <table border=1 width=300 height=250 id="customer-details"
+         style="border-collapse: collapse;
+               border: none;
+               margin-top:25px;
+               outline:none;">
+            <tr style="background-color:#0671f4;
+                       color: #fff">
                 <th colspan='2'>Customer Details</th>
             </tr>
-            <tr>
-                <td>Full Name :</td>
+            <tr style="font-weight: bold;
+                       color:grey; ">
+                <td>Full Name:</td>
                 <td>${userData.fullname}</td>
                 </tr>
         
             
-            <tr>
-                <td>Location:</td>
+            <tr style="font-weight: bold;
+                       color:grey; ">
+                <td>Destination:</td>
                 <td>${userData.location}</td>
                 </tr>
         
-            <tr>
+            <tr style="font-weight: bold;
+                       color:grey; ">
                 <td>Date of Departure:</td>
                 <td>${userData.depDate}</td>
             </tr>
-            <tr>
+            <tr style="font-weight: bold;
+                       color:grey; ">
                 <td>Time of Departure:</td>
                 <td>${userData.depTime}</td>
             </tr>
-            <tr>
-                <td>Company:</td>
+            <tr style="font-weight: bold;
+                       color:grey; ">
+                <td>Transport Service:</td>
                 <td>${userData.companies}</td>
             </tr>
-            <tr>
+            <tr style="font-weight: bold;
+                       color:grey; ">
                 <td>Tickets number:</td>
                 <td>${userData.passenger}</td>
             </tr>
-            <tr>
+            <tr style="font-weight: bold;
+                       color:grey; ">
                 <td>Fare(GHS):</td>
                 <td>60</td>
             </tr>
             
-                
-           
-        </table>
+         </table>
         
 </div>
         `;
