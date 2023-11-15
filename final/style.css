@@ -867,12 +867,12 @@ textarea#area{
   --gradient-secondary: linear-gradient(to top left, #2003ff, #dae4ed);
 }
 
-body {
+/* body {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
+} */
 
 /* .container {
     max-width: 600px;
