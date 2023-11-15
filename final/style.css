@@ -148,7 +148,7 @@ img {
 .nav__link:visited {
   font-size: 1.7rem;
   font-weight: 400;
-  color: inherit;
+  color: black;
   text-decoration: none;
   display: block;
   transition: all 0.3s;
@@ -159,7 +159,7 @@ img {
   padding: 0.8rem 2.5rem;
   border-radius: 3rem;
   background-color: var(--color-primary);
-  color: #222;
+  color: #222222;
 }
 
 .nav__link--btn:hover,
@@ -618,11 +618,12 @@ h4 {
 }
 
 .modal__form {
-  margin: 0 3rem;
+  margin: -37px -2rem;
   display: grid;
   grid-template-columns: 1fr 2fr;
   align-items: center;
   gap: 2.5rem;
+  justify-content: center;
 }
 
 .modal__form label {
@@ -637,10 +638,33 @@ h4 {
   border-radius: 0.5rem;
 }
 
+select{
+  font-size: 1.7rem;
+  padding: 1rem 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+}
 .modal__form button {
   grid-column: 1 / span 2;
   justify-self: center;
   margin-top: 1rem;
+}
+#next{
+  display: right;
+}
+
+#prev{
+  display: left;
+}
+
+.navbar-brand{
+  font-weight: 500;
+  color: var(--night-rider);
+  font-size: 30px;
+}
+.navbar-brand span{
+  color: blue;
+  font-size: 70px;
 }
 
 .btn--close-modal {
