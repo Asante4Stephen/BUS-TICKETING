@@ -618,17 +618,25 @@ h4 {
 }
 
 .modal__form {
-  margin: -37px -2rem;
+  /* margin: -37px -2rem; */
   display: grid;
   grid-template-columns: 1fr 2fr;
   align-items: center;
   gap: 2.5rem;
   justify-content: center;
+  margin-top: 45px;
+  background-color: white;
+  padding: 25px 39px;
+  width: 100%;
+  max-width: 560px;
 }
 
 .modal__form label {
   font-size: 1.7rem;
-  font-weight: 500;
+  /* font-weight: 500; */
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
 }
 
 .modal__form input {
@@ -636,6 +644,9 @@ h4 {
   padding: 1rem 1.5rem;
   border: 1px solid #ddd;
   border-radius: 0.5rem;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
 }
 
 select{
@@ -643,12 +654,30 @@ select{
   padding: 1rem 1.5rem;
   border: 1px solid #ddd;
   border-radius: 0.5rem;
+  width: 19vw;
+  /* padding: 10px; */
+  margin-bottom: 15px;
 }
 .modal__form button {
   grid-column: 1 / span 2;
   justify-self: center;
   margin-top: 1rem;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  background-color: #0074d9;
+  color: #312e2e;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-left: 12px;
 }
+
+.modal__form button:hover {
+  opacity: 0.8;
+  transition: 0.3s;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  background-color: #ece6e6;}
 #next{
   display: right;
 }
