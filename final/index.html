@@ -48,8 +48,7 @@
           </li>
           <li class="nav__item">
             <a class="nav__link nav__link--btn btn--show-modal" href="#"
-             onclick="()=> showForm('form1Container')" >Book Now</a
-            >
+             onclick="()=> showForm('form1Container')" >Book Now</a>
           </li>
         </ul>
       </nav>
@@ -356,7 +355,11 @@
       </footer>
       
       <div class="modal hidden">
-      
+        <button class="btn--close-modal">&times;</button>
+        <h2 class="modal__header">
+          Book a Ticket <br />
+          in just some <span class="highlight">seconds</span>
+        </h2>
         <!-- <form class="modal__form">
           <label>Full Name <span2>*</span2></label>
           <input type="text" id="fullName" required>
