@@ -23,11 +23,6 @@
 
 
 
-
-
-
-
-
     <script type="" src="./booking_script.js"></script>
     <script>
 
@@ -40,9 +35,15 @@ const busSearchResults = document.getElementById('bus-search-results');
 
     busSearchResults.innerHTML = `<h2>Available Buses</h2>
         <ul>
+<<<<<<< HEAD
+            <li>Bus A - Price: 	&#8373;50 <button onclick="selectSeats('Bus A')">Select Seats</button></li>
+            <li>Bus B - Price:	&#8373;60 <button onclick="selectSeats('Bus B')">Select Seats</button></li>
+            <li>Bus C - Price:	&#8373;70 <button onclick="selectSeats('Bus C')">Select Seats</button></li>
+=======
             <li>Bus A(Regular) - Price: $50 <button onclick="selectSeats('Bus A')">Select Seats</button></li>
             <li>Bus B (Comfort)- Price: $60 <button onclick="selectSeats('Bus B')">Select Seats</button></li>
             <li>Bus C (1st Class)- Price: $70 <button onclick="selectSeats('Bus C')">Select Seats</button></li>
+>>>>>>> 6c911deec516bcf9a870bcada292c862700c5233
         </ul>`;
         busSearchResults.style.display = 'block';;
         busSearchResults.style.margin = 'auto';
