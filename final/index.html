@@ -473,11 +473,12 @@
 
     <div id="form2Container" style="display: none;">
       <form class="modal__form">
-          <!-- Add the fields for the second form here -->
-          <label>Additional Field</label>
-          <input type="text">
-          <label>Another Field</label>
-          <input type="text">
+        <h2>Available Buses</h2>
+        <ul>
+            <li>Bus A(Regular) - Price: $50 <button onclick="selectSeats('Bus A')">Select Seats</button></li>
+            <li>Bus B (Comfort)- Price: $60 <button onclick="selectSeats('Bus B')">Select Seats</button></li>
+            <li>Bus C (1st Class)- Price: $70 <button onclick="selectSeats('Bus C')">Select Seats</button></li>
+        </ul>
           <button type="button" class="btn" onclick="showForm('form3Container','form2Container')">Next step →</button>
       </form>
   </div>
