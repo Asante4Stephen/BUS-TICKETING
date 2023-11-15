@@ -19,14 +19,17 @@
   <body>
     <header class="header" id="section--1">
       <nav class="nav">
-        <img
+        <a href = "index.html" class = "navbar-brand">
+          Pers<span>.</span>Ticketing
+        </a>
+        <!-- <img
           src="img/logo2.png"
           alt=" logo"
           class="nav__logo"
           id="logo"
           designer="Jonas"
           data-version-number="3.0"
-        />
+        /> -->
         <ul class="nav__links">
           <li class="nav__item">
             <a class="nav__link" href="#section--1">Home</a>
@@ -45,7 +48,7 @@
           </li>
           <li class="nav__item">
             <a class="nav__link nav__link--btn btn--show-modal" href="#"
-              >Book Now</a
+             onclick="()=> showForm('form1Container')" >Book Now</a
             >
           </li>
         </ul>
@@ -356,24 +359,161 @@
           target="_blank"
           href="https://twitter.com/jonasschmedtman"
           >Pers System Limited</a>
-      </p>
-    </footer>
+        </p>
+      </footer>
+      
+      <div class="modal hidden">
+        <button class="btn--close-modal">&times;</button>
+        <h2 class="modal__header">
+          Book a Ticket <br />
+          in just some <span class="highlight">seconds</span>
+        </h2>
+        <!-- <form class="modal__form">
+          <label>Full Name <span2>*</span2></label>
+          <input type="text" id="fullName" required>
+          <label>Company <span2>*</span2></label>
+          <input list="browsers" name="browser" id="companies"required>
+      
+            <datalist id="browsers">
+            <option value=" STC Transports">
+            <option value="VIP Transports">
+            <option value="VVIP Transports">
+            <option value="2M Express Transports">
+            <option value="FORD Transports">
+            
+            </datalist>
+          <label>Location <span2>*</span2></label>
+          <input list="locations" name="browser" id="location" required>
+      
+          <datalist id="locations">
+            <option value="ACCRA">
+            <option value="TEMA">
+            <option value="TAKORADI">
+            <option value="KUMASI">
+            <option value="SUNYANI">
+            <option value="CAPE COAST">
+            
+          </datalist>
+          <label>Passengers <span2>*</span2></label>
+          <input type="number" id="passenger" required>
+          <label>Date <span2>*</span2></label>
+          <input type="date" id="depDate" required>
+          <label>Departure Time <span2>*</span2></label>
+          <input type="time" id="depTime" required>
+          
+         <!-- <button type="button" onClick="searchBuses()" id="saveButton">Search Buses</button>
+         -->
+         <!-- <a href="#bus-search-results show-modal"><button type="button" class="btn">Search Buses</button></a> -->
+        <!-- </form> -->  
+         
+    <div id="form1Container">
+        <form class="modal__form">
+          <label>Transport Company <span2>*</span2></label>
+          <select name="companies" id="companies">
+            <option value="stc">STC Transports</option>
+            <option value="vip">VIP Transports</option>
+            <option value="2mexp" >2M Express</option>
+          </select>
 
-    <div class="modal hidden">
-      <button class="btn--close-modal">&times;</button>
-      <h2 class="modal__header">
-        Book a Ticket <br />
-        in just some <span class="highlight">seconds</span>
-      </h2>
+          <label>Full Name <span2>*</span2></label>
+          <input type="text" id="fullName" required>
+          
+          <label>Traveling From<span2>*</span2></label>
+          <select name="travelingFrom" id="travelingFrom" aria-placeholder="WHERE TO">
+            <option value="accra">ACCRA</option>
+            <option value="tema">TEMA</option>
+            <option value="takoradi" >TAKORADI</option>
+            <option value="kumasi" >KUMASI</option>
+            <option value="sunyani" >SUNYANI</option>
+            <option value="capecoast" >CAPE COAST</option>
+          </select>
 
-      <a href="/booking_index.html"> <button type="button" class="btn">Book Now</button></a>
+          <label>Traveling To <span2>*</span2></label>
+          <select name="travelingto" id="travelingto">
+            <option value="accra">ACCRA</option>
+            <option value="tema">TEMA</option>
+            <option value="takoradi" >TAKORADI</option>
+            <option value="kumasi" >KUMASI</option>
+            <option value="sunyani" >SUNYANI</option>
+            <option value="capecoast" >CAPE COAST</option>
+          </select>
+          <!-- <input list="locations" name="browser" id="location" required>
+      
+          <datalist id="locations">
+            <option value="ACCRA">
+            <option value="TEMA">
+            <option value="TAKORADI">
+            <option value="KUMASI">
+            <option value="SUNYANI">
+            <option value="CAPE COAST">
+            
+          </datalist> -->
+          <label>Number of Tickets <span2>*</span2></label>
+          <input type="number" id="passenger" required>
+          <label>Departure Date <span2>*</span2></label>
+          <input type="date" id="depDate" required>
+          <label>Departure Time <span2>*</span2></label>
+          <select name="depTime" id="depTime">
+            <option value="t1">8:00AM</option>
+            <option value="t2">10:00AM</option>
+            <option value="t3">11:00AM</option>
+            <option value="t4">12:00PM</option>
+            <option value="t5">1:00PM</option>
+            <option value="t6">2:00PM</option>
+            <option value="t6">4:00PM</option>
+            <option value="t6">5:00PM</option>
+          </select>
+          <!-- <input type="time" id="depTime" required> -->
+          <!-- <button type="button" onClick="searchBuses()" id="saveButton">Search Buses</button> -->
+          <!-- <button class="btn" onClick="searchBuses()">Next step →</button> -->
+          <button id="next" type="button" class="btn" onclick="showForm('form2Container','form1Container')">Next step →</button>
+          <button id="prev" type="button" class="btn btn-default btn-prev">Prev</button>
+        </form>
+    </div>
 
+    <div id="form2Container" style="display: none;">
+      <form class="modal__form">
+          <!-- Add the fields for the second form here -->
+          <label>Additional Field</label>
+          <input type="text">
+          <label>Another Field</label>
+          <input type="text">
+          <button type="button" class="btn" onclick="showForm('form3Container','form2Container')">Next step →</button>
+      </form>
+  </div>
+    <div id="form3Container" style="display: none;">
+      <form class="modal__form">
+          <!-- Add the fields for the second form here -->
+          <label>Additional Field 2</label>
+          <input type="text">
+          <label>Another Field</label>
+          <input type="text">
+          <button type="button" class="btn" onclick="()=>showForm('form2Container', '')">Submit</button>
+      </form>
+  </div>
 
     </div>
+
+
+
+
     <div class="overlay hidden"></div>
+    <script>
+      function showForm(showEl="", hideEl="") {
+          document.getElementById(hideEl).style.display = 'none';
+          document.getElementById(showEl).style.display = 'block';
+      }
+  
+      // function submitForm(formId) {
 
+      //     // Add logic to submit the form data
+      //     document.getElementById('form2Container').style.display = 'none';
+      //     document.getElementById('form1Container').style.display = 'block';
 
-<script src="./booking_script.js"></script>
-    <!-- <script src="script.js"></script> -->
+      // }
+  </script>
+
+<script src="booking_script.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>

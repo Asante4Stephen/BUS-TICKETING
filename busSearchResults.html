@@ -12,7 +12,7 @@
 
     
 
-<div id="bus-search-results" >
+<div id="bus-search-results show-modal" >
     
     <!-- Bus Search Results -->
       <!-- Bus options will be displayed here -->
@@ -40,9 +40,9 @@ const busSearchResults = document.getElementById('bus-search-results');
 
     busSearchResults.innerHTML = `<h2>Available Buses</h2>
         <ul>
-            <li>Bus A - Price: $50 <button onclick="selectSeats('Bus A')">Select Seats</button></li>
-            <li>Bus B - Price: $60 <button onclick="selectSeats('Bus B')">Select Seats</button></li>
-            <li>Bus C - Price: $70 <button onclick="selectSeats('Bus C')">Select Seats</button></li>
+            <li>Bus A(Regular) - Price: $50 <button onclick="selectSeats('Bus A')">Select Seats</button></li>
+            <li>Bus B (Comfort)- Price: $60 <button onclick="selectSeats('Bus B')">Select Seats</button></li>
+            <li>Bus C (1st Class)- Price: $70 <button onclick="selectSeats('Bus C')">Select Seats</button></li>
         </ul>`;
         busSearchResults.style.display = 'block';;
         busSearchResults.style.margin = 'auto';
