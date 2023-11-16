@@ -482,7 +482,7 @@ STC Transportation, a leading player in Ghana's transport sector, is synonymous 
         </form>
   </div>
     <div id="form3Container" style="display: none;">
-      <button class="btn--close-modal">&times;</button>
+      <!-- <button class="btn--close-modal">&times;</button> -->
       <h2 class="modal__header">
         Seat <span class="highlight">Selection</span>
       </h2>
@@ -503,7 +503,7 @@ STC Transportation, a leading player in Ghana's transport sector, is synonymous 
     </form>
   </div>
     <div id="form4Container" style="display: none;">
-      <button class="btn--close-modal">&times;</button>
+      <!-- <button class="btn--close-modal">&times;</button> -->
       <h2 class="modal__header">
        Pay<span class="highlight">ment</span>
       </h2>
@@ -522,7 +522,7 @@ STC Transportation, a leading player in Ghana's transport sector, is synonymous 
       </form>
   </div>
     <div id="form5Container" style="display: none;">
-      <button class="btn--close-modal">&times;</button>
+      <!-- <button class="btn--close-modal">&times;</button> -->
       <h2 class="modal__header">
        Confirma<span class="highlight">tion</span>
       </h2>
@@ -538,15 +538,12 @@ STC Transportation, a leading player in Ghana's transport sector, is synonymous 
                        color:black; ">
                 <td class="d1">Full Name:</td>
                 <td class="d1">${userData.fullname}</td>
-                </tr>
-        
-            
+                </tr>            
             <tr style="font-weight: bold;
                        color:black; ">
                 <td>Destination:</td>
                 <td>${userData.location}</td>
                 </tr>
-        
             <tr class="r1" style="font-weight: bold;
                        color:black; ">
                 <td class="d1">Date of Departure:</td>
@@ -574,20 +571,15 @@ STC Transportation, a leading player in Ghana's transport sector, is synonymous 
             </tr>
             
          </table>
-        </form>
       </div>
-      <div class="btn-box4">
-        
+    </form>
+    <div class="btn-box4"> 
       <button id="prev4" type="button" class="btn btn-default btn-prev">Prev</button>
       <button class="btn" onclick="window.print()" id="printButton">Print Ticket</button>
-
+  </div>
       </div>
       <!-- <button type="button" class="btn" onclick="confirmBooking('')"">Next step →</button> -->
   </div>
-
-    </div>
-
-
 
 
     <div class="overlay hidden"></div>
