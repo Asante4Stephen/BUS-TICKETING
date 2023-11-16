@@ -926,7 +926,7 @@ textarea#area{
   text-align: center;
   padding-left: 65px;
   padding-bottom: 14px;
-  position: absolute;
+  position: relative;
 }
 
 .btn-box{
@@ -944,9 +944,4 @@ span2{
 }
 #next{
   margin-left: 59px;
-}
-.ytp-cards-button-icon {
-  margin: auto;
-  width: 36px;
-  height: 36px;
 }
