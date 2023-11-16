@@ -66,8 +66,8 @@ body {
 
 .btn {
   display: inline-block;
-  /* background-color: var(--color-primary); */
-  background: linear-gradient(to right, #0074d980 ,white, #0074d995 ); 
+  background-color: var(--color-primary);
+  /* background: linear-gradient(to right,rgb(0, 45, 55), #0074d995 );  */
   font-size: 1.6rem;
   font-family: inherit;
   font-weight: 500;
