@@ -875,13 +875,45 @@ textarea#area{
     font-size: 18px;
 }
 
-
-
-
 /* booking css */
 
 #form5Container{
   display: flex;
   justify-content: space-around;
   column-gap: 1.5rem;
+ 
+}
+
+#customer-details{
+  border-collapse: collapse;
+  border:none;
+  margin-top:25px;
+  box-shadow: 0.7px 10px 15px rgba(0, 0, 0, 0.3);
+  
+}
+#customer-details th{
+  font-weight: bold;
+  font-size: 16px;
+}
+
+#customer-details:focus{
+  outline: none;
+}
+
+.r1{
+  background-color: rgb(211, 204, 204);
+ 
+}
+
+.r1:hover{
+   font-size: 120%;
+   transition: 0.2s;
+}
+
+.d1{
+  color:#3c697a; 
+}
+
+.tablediv{
+  text-align: center;
 }
