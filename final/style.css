@@ -597,6 +597,7 @@ h4 {
   box-shadow: 0 4rem 6rem rgba(0, 0, 0, 0.3);
   z-index: 1000;
   transition: all 0.5s;
+  border-radius: 15px;
 }
 
 .overlay {
@@ -660,7 +661,7 @@ select{
   padding: 1rem 1.5rem;
   border: 1px solid #ddd;
   border-radius: 0.5rem;
-  width: 19vw;
+  width: 100%;
   /* padding: 10px; */
   margin-bottom: 15px;
 }
@@ -887,9 +888,9 @@ textarea#area{
 
 #form5Container{
   display: flex;
-  justify-content: space-around;
-  column-gap: 1.5rem;
- 
+  justify-content: center;
+  column-gap: 7.5rem;
+ margin-left: 70px;
 }
 
 #customer-details{
@@ -924,15 +925,33 @@ textarea#area{
 
 .tablediv{
   text-align: center;
+<<<<<<< HEAD
   margin-left: 20px;
+=======
+  padding-left: 65px;
+  padding-bottom: 14px;
+  position: absolute;
+>>>>>>> 688942b48f3a3fa7a50e60a6ed03577cf61c8aba
 }
 
 .btn-box{
+  display: flex;
   width: 100%;
-  margin: -12px 78px;
+  margin: -12px 69px;
   text-align: center;
 }
 .btn-box4,.btn-box1{
   margin: 24px 0px 0 56px;
   padding: 9px 6px;
+}
+span2{
+  color: red;
+}
+#next{
+  margin-left: 59px;
+}
+.ytp-cards-button-icon {
+  margin: auto;
+  width: 36px;
+  height: 36px;
 }
