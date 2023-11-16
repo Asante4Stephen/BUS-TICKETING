@@ -629,6 +629,7 @@ h4 {
   max-width: 560px;
   align-content: center;
   justify-items: start;
+  
 }
 
 .modal__form label {
@@ -924,9 +925,17 @@ textarea#area{
 
 .tablediv{
   text-align: center;
+<<<<<<< HEAD
+  margin-left: 20px;
+=======
   padding-left: 65px;
   padding-bottom: 14px;
+<<<<<<< HEAD
   position: relative;
+=======
+  position: absolute;
+>>>>>>> 688942b48f3a3fa7a50e60a6ed03577cf61c8aba
+>>>>>>> 51df5a04a4caa7ead2ed15f18276dbb9a0ddecd2
 }
 
 .btn-box{
