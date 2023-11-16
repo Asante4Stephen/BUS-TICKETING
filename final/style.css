@@ -66,7 +66,8 @@ body {
 
 .btn {
   display: inline-block;
-  background-color: var(--color-primary);
+  /* background-color: var(--color-primary); */
+  background: linear-gradient(to right, #0074d980 ,white, #0074d995 ); 
   font-size: 1.6rem;
   font-family: inherit;
   font-weight: 500;
@@ -884,4 +885,14 @@ textarea#area{
   display: flex;
   justify-content: space-around;
   column-gap: 1.5rem;
+}
+
+.btn-box{
+  width: 100%;
+  margin: -12px 78px;
+  text-align: center;
+}
+.btn-box4,.btn-box1{
+  margin: 24px 0px 0 56px;
+  padding: 9px 6px;
 }

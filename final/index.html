@@ -108,9 +108,8 @@
             STC Transportation
           </h5>
           <p>
-            In 1965, it was made a body corporate by Legislative Instrument (L.I) number 414 of 9th March 1965 to run commercial passenger services and was then called the State Transport Corporation (STC).
-            Book a bus ticket and enjoy your ride without cramming for space, in a comfortable bus, at a cost that your pocket can happily bear.
-          </p>
+            
+STC Transportation, a leading player in Ghana's transport sector, is synonymous with reliability and affordability. With an extensive network of routes, STC ensures competitive fares for various destinations, offering a cost-effective travel solution. Boasting well-maintained buses and a commitment to service excellence, STC stands out as a trusted choice for both short commutes and longer journeys. Choose STC for a comfortable and dependable journey across Ghana.</p>
         </div>
 
         <div class="operations__content operations__content--2">
@@ -460,9 +459,10 @@
           <!-- <button type="button" onClick="searchBuses()" id="saveButton">Search Buses</button> -->
         </form>
         <!-- <button class="btn" onClick="searchBuses()">Next step →</button> -->
-        <button id="next" type="button" class="btn" onclick="showForm('form2Container','form1Container')">Next step →</button>
-        <button id="prev" type="button" class="btn btn-default btn-prev">Prev</button>
-    </div>
+        <div class="btn-box1">
+          <button id="next" type="button" class="btn" onclick="showForm('form2Container','form1Container')">Next step →</button>
+        </div>
+      </div>
 
     <div id="form2Container" style="display: none;">
       <h2 class="modal__header">
@@ -476,7 +476,10 @@
           <li>Bus C - Price:	&#8373;70<button type="button" class="btn" onclick="showForm('form3Container','form2Container')">Select Bus</button></li>
         </ul>
           <!-- <button type="button" class="btn" onclick="showForm('form3Container','form2Container')">Next step →</button> -->
-      </form>
+        <div class="btn-box">
+          <button id="prev1" type="button" class="btn btn-default btn-prev">Prev</button>
+        </div>
+        </form>
   </div>
     <div id="form3Container" style="display: none;">
       <button class="btn--close-modal">&times;</button>
@@ -493,8 +496,11 @@
         <option value="2B">2B(Aisle)</option>
         <!-- Add more seat options -->
         </select>
-        <button type="button" class="btn" onclick="showForm('form4Container','form3Container')">Next step →</button>
-      </form>
+        <div class="btn-box">
+          <button id="prev2" type="button" class="btn btn-default btn-prev">Prev</button>
+          <button type="button" class="btn" onclick="showForm('form4Container','form3Container')">Next step →</button>  
+        </div>
+    </form>
   </div>
     <div id="form4Container" style="display: none;">
       <button class="btn--close-modal">&times;</button>
@@ -509,8 +515,10 @@
             <option value="wallet">Mobile Wallet</option>
             <option value="online-banking">Online Banking</option>
         </select>
-          <button type="button" class="btn" onclick="showForm('form5Container','form4Container')">Next step →</button>
-          <!-- <button type="button" class="btn" onclick="confirmBooking('')"">Next step →</button> -->
+        <div class="btn-box">
+          <button id="prev3" type="button" class="btn btn-default btn-prev">Prev</button>
+        <button type="button" class="btn" onclick="showForm('form5Container','form4Container')">Next step →</button>
+        </div>  <!-- <button type="button" class="btn" onclick="confirmBooking('')"">Next step →</button> -->
       </form>
   </div>
     <div id="form5Container" style="display: none;">
@@ -568,8 +576,12 @@
          </table>
         </form>
       </div>
+      <div class="btn-box4">
+        
+      <button id="prev4" type="button" class="btn btn-default btn-prev">Prev</button>
       <button class="btn" onclick="window.print()" id="printButton">Print Ticket</button>
 
+      </div>
       <!-- <button type="button" class="btn" onclick="confirmBooking('')"">Next step →</button> -->
   </div>
 
@@ -580,6 +592,45 @@
 
     <div class="overlay hidden"></div>
     <script>
+
+      var prev1 = document.getElementById('prev1')
+      var prev2 = document.getElementById('prev2')
+      var prev3 = document.getElementById('prev3')
+      var prev4 = document.getElementById('prev4')
+
+      prev1.onclick = function() {
+        showForm('form1Container','form2Container')
+      }
+      prev2.onclick = function() {
+        showForm('form2Container','form3Container')
+      }
+      prev3.onclick = function() {
+        showForm('form3Container','form4Container')
+      }
+      prev4.onclick = function() {
+        showForm('form4Container','form5Container')
+      }
+
+      //var nextStep = document.querySelector('.next-step');
+      // var next = document.getElementById('next')
+      // var form1Container = document.getElementById('form1Container')
+      // var form2Container = document.getElementById('form2Container')
+      // var form3Container = document.getElementById('form3Container')
+      // var form4Container = document.getElementById('form4Container')
+      // var form5Container = document.getElementById('form5Container')
+      // var printButton = document.getElementById('printButton')
+      // var overlay = document.querySelector('.overlay')
+      // var customerDetails = document.getElementById('customer-details')
+      // var selectedSeats = document.getElementById('selected-seats')
+      // var paymentMethod = document.getElementById('payment-method')
+      // var userData = {
+      //   fullname: '',
+      //   location: '',
+      //   depDate: '',
+      //   depTime: '',
+      //   companies: '',
+      //   passenger: '',
+      // }
 
       let customerDetails= document.querySelector('#customer-details')
         var formData = {};
