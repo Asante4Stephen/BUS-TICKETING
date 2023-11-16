@@ -640,6 +640,12 @@ h4 {
   font-weight: bold;
 }
 
+h2{
+  font-size: 25px;
+}
+ ul li{
+  font-size: 19px;
+ }
 .modal__form input {
   font-size: 1.7rem;
   padding: 1rem 1.5rem;
