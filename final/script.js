@@ -507,3 +507,53 @@ window.addEventListener('beforeunload', function (e) {
   e.returnValue = '';
 });
 */
+
+function changeColor(n){
+  for (let index = 0; index < 5; index++) {
+    const element = document.getElementById(`Link-${index}`);
+    if(index === n){element.style.color="blue"}
+    else{
+      {element.style.color="rgb(0, 0, 0)"}
+    }
+  }
+}
+
+
+// function showType(){
+
+//   for (let index = 0; index < 2; index++) {
+//     const infoListDrop1= document.getElementById(`info-list-1`);
+//  infoListDrop1.innerHTML = `<h5>Economic<h5>`
+//   const infoListDrop2= document.getElementById(`info-list-2`);
+//   infoListDrop2.innerHTML = `<h5>Comfort<h5>`
+//   const infoListDrop3= document.getElementById(`info-list-3`);
+//   infoListDrop3.innerHTML = `<h5>1st class<h5>`
+    
+//   }
+// }
+function showType(busType) {
+  // Get the icon element
+  var infoIcon = event.target;
+  
+  // Get the parent li element
+  var listItem = infoIcon.parentElement;
+  
+  // Get the index of the clicked icon
+  var index = Array.prototype.indexOf.call(listItem.parentElement.children, listItem) + 1;
+
+  // Get the info-type element
+  var infoType = document.querySelector('.info-type');
+
+  // Display the information based on the bus type
+  infoType.innerText = `This bus is ${busType} `;
+  infoType.style.display = 'block';
+
+  // Hide the info after  seconds 
+  setTimeout(function () {
+      infoType.style.display = 'none';
+  }, 11000);
+}
+
+function showData(){
+  document.getElementById('user_fullname')
+}

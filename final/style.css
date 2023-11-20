@@ -146,14 +146,22 @@ img {
 }
 
 .nav__link:link,
-.nav__link:visited {
+ .nav__link:visited {
   font-size: 1.7rem;
   font-weight: 400;
-  color: black;
+  color: rgb(0, 0, 0);
   text-decoration: none;
   display: block;
   transition: all 0.3s;
 }
+
+
+ .nav__link:active{
+  color: #0671f4;
+  transition: 5s;
+ }
+
+
 
 .nav__link--btn:link,
 .nav__link--btn:visited {
@@ -644,7 +652,7 @@ h2{
   font-size: 25px;
 }
  ul li{
-  font-size: 19px;
+  font-size: 22px;
  }
 .modal__form input {
   font-size: 1.7rem;
@@ -655,11 +663,22 @@ h2{
   padding: 10px;
   margin-bottom: 15px;
 }
+.i-info{
+  font-size: 18px;
+  padding-left:5px;
+  color: #202893;
+  cursor: pointer;
+}
+
+.i-info:active{
+  color: #413e3e;
+  font-size: larger;
+}
 
 select{
   font-size: 1.7rem;
   padding: 1rem 1.5rem;
-  border: 1px solid #ddd;
+  border: none;
   border-radius: 0.5rem;
   width: 100%;
   /* padding: 10px; */
@@ -689,8 +708,11 @@ select{
   display: right;
 }
 
-#prev{
+#prev1{
   display: left;
+  padding: 25px;
+  width: 50%;
+  box-shadow: 5px 3px 5px rgba(1, 1, 1, 0.5)
 }
 
 .navbar-brand{
@@ -947,4 +969,15 @@ span2{
 }
 #next{
   margin-left: 59px;
+}
+
+.info-type{
+  display: none;
+  font-size: 26px;
+  color: #fff;
+  background-color: #3f9fdb;
+  border-radius: 6px;
+  padding: 16px 12px 16px 12px;
+  font-weight: bold;
+  box-shadow: 7px 10px 7px rgba(0, 0, 0, 0.2);
 }

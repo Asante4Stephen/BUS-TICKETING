@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="shortcut icon" type="image/png" href="img/icon.png" />
@@ -32,19 +32,19 @@
         /> -->
         <ul class="nav__links">
           <li class="nav__item">
-            <a class="nav__link" href="#section--1">Home</a>
+            <a class="nav__link" onclick="changeColor(0)" id="Link-0" href="#section--1">Home</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="#companies">Companies</a>
+            <a class="nav__link" onclick="changeColor(1)" id="Link-1" href="#companies">Companies</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="#about">About Us</a>
+            <a class="nav__link" onclick="changeColor(2)" id="Link-2" href="#about">About Us</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="#testimonial">Testimonials</a>
+            <a class="nav__link" onclick="changeColor(3)" id="Link-3"  href="#testimonial">Testimonials</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="#contact">Contact Us</a>
+            <a class="nav__link" onclick="changeColor(4)" id="Link-4" href="#contact">Contact Us</a>
           </li>
           <li class="nav__item">
             <a class="nav__link nav__link--btn btn--show-modal" href="#"
@@ -470,15 +470,21 @@ STC Transportation, a leading player in Ghana's transport sector, is synonymous 
       </h2>
       <form class="modal__form">
         <h2>Available Buses</h2>
+        <!-- <ul>
+          <li>  Bus A - Price: 	&#8373;50<span class="i-info" onclick="showType('Economic')" id="info-list-1"><i class="fas fa-info-circle"></i></span><button type="button" class="btn" onclick="showForm('form3Container','form2Container')">Select Bus A </button></li>
+          <li>Bus B - Price:	&#8373;60<span class="i-info" onclick="showType('Comfort')" id="info-list-2" ><i class="fas fa-info-circle"></i></span><button type="button" class="btn" onclick="showForm('form3Container','form2Container')">Select Bus B</button></li>
+          <li>Bus C - Price:	&#8373;70<span class="i-info" onclick="showType('First-Class')" id="info-list-3"><i class="fas fa-info-circle"></i></span><button type="button" class="btn" onclick="showForm('form3Container','form2Container')">Select Bus C</button></li>
+        </ul> -->
+        <div class="info-type"></div>
         <ul>
-          <li>  Bus A - Price: 	&#8373;50<button type="button" class="btn" onclick="showForm('form3Container','form2Container')">Select Bus A
-            </button></li>
-          <li>Bus B - Price:	&#8373;60<button type="button" class="btn" onclick="showForm('form3Container','form2Container')">Select Bus B</button></li>
-          <li>Bus C - Price:	&#8373;70<button type="button" class="btn" onclick="showForm('form3Container','form2Container')">Select Bus C</button></li>
-        </ul>
+          <li>Bus A - Price: &#8373;50<span class="i-info" onclick="showType('Economic')" id="info-list-1"><i class="fas fa-info-circle"></i></span><button type="button" class="btn" onclick="showForm('form3Container','form2Container')">Select Bus A</button></li>
+          <li>Bus B - Price: &#8373;60<span class="i-info" onclick="showType('Comfort')" id="info-list-2" ><i class="fas fa-info-circle"></i></span><button type="button" class="btn" onclick="showForm('form3Container','form2Container')">Select Bus B</button></li>
+          <li>Bus C - Price: &#8373;70<span class="i-info" onclick="showType('First-Class')" id="info-list-3"><i class="fas fa-info-circle"></i></span><button type="button" class="btn" onclick="showForm('form3Container','form2Container')">Select Bus C</button></li>
+      </ul>
+      
           <!-- <button type="button" class="btn" onclick="showForm('form3Container','form2Container')">Next step →</button> -->
         <div class="btn-box">
-          <button id="prev1" type="button" class="btn btn-default btn-prev">←Prev</button>
+          <button id="prev1" type="button" class="btn btn-default btn-prev" style="padding: 5px 2px;">←Prev</button>
         </div>
         </form>
   </div>
@@ -518,7 +524,7 @@ STC Transportation, a leading player in Ghana's transport sector, is synonymous 
         </select>
         <div class="btn-box">
           <button id="prev3" type="button" class="btn btn-default btn-prev">←Prev</button>
-          <button type="button" class="btn" onclick="showForm('form5Container','form4Container')">Next step →</button>
+          <button type="button" class="btn" onclick="showForm('form5Container','form4Container'); showData()">Next step →</button>
         </div>  <!-- <button type="button" class="btn" onclick="confirmBooking('')"">Next step →</button> -->
       </form>
   </div>
@@ -527,7 +533,8 @@ STC Transportation, a leading player in Ghana's transport sector, is synonymous 
       <h2 class="modal__header">
        Confirma<span class="highlight">tion</span>
       </h2>
-      <form class="modal__form">
+
+      <form class="modal__form" id="confirmation'">
       <div class="tablediv">
         <table border=1 width=300 height=250 id="customer-details"
          >
@@ -536,34 +543,34 @@ STC Transportation, a leading player in Ghana's transport sector, is synonymous 
                 <th colspan='2'>Customer Details</th>
             </tr>
             <tr class="r1" style="font-weight: bold;
-                       color:black; ">
+                       color:black;">
                 <td class="d1">Full Name:</td>
-                <td class="d1">${userData.fullname}</td>
+                <td class="d1" id="user_fullname">${userData.fullname}</td>
                 </tr>            
             <tr style="font-weight: bold;
                        color:black; ">
                 <td>Destination:</td>
-                <td>${userData.location}</td>
+                <td id="" >${userData.location}</td>
                 </tr>
             <tr class="r1" style="font-weight: bold;
                        color:black; ">
                 <td class="d1">Date of Departure:</td>
-                <td class="d1">${userData.depDate}</td>
+                <td class="d1" id="">${userData.depDate}</td>
             </tr>
             <tr style="font-weight: bold;
                        color:black; ">
                 <td>Time of Departure:</td>
-                <td>${userData.depTime}</td>
+                <td id="">${userData.depTime}</td>
             </tr>
             <tr class="r1" style="font-weight: bold;
                        color:black; ">
                 <td class="d1">Transport Service:</td>
-                <td class="d1">${userData.companies}</td>
+                <td class="d1" id="">${userData.companies}</td>
             </tr>
             <tr style="font-weight: bold;
                        color:black; ">
                 <td>Tickets number:</td>
-                <td>${userData.par1ssenger}</td>
+                <td id="">${userData.par1ssenger}</td>
             </tr>
             <tr class="r1" style="font-weight: bold;
                        color:black; ">
