@@ -596,9 +596,12 @@ h4 {
 
 /* MODAL WINDOW */
 .modal {
-  position: absolute;
+  /* position: absolute;
   top: 53%;
-  left: 50%;
+  left: 50%; */
+    position: fixed;
+            top: 50%;
+            left: 50%;
   transform: translate(-50%, -50%);
   background-color: #f3f3f3;
   padding: 2rem 4rem;
