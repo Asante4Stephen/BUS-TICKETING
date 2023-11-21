@@ -519,18 +519,7 @@ function changeColor(n){
 }
 
 
-// function showType(){
 
-//   for (let index = 0; index < 2; index++) {
-//     const infoListDrop1= document.getElementById(`info-list-1`);
-//  infoListDrop1.innerHTML = `<h5>Economic<h5>`
-//   const infoListDrop2= document.getElementById(`info-list-2`);
-//   infoListDrop2.innerHTML = `<h5>Comfort<h5>`
-//   const infoListDrop3= document.getElementById(`info-list-3`);
-//   infoListDrop3.innerHTML = `<h5>1st class<h5>`
-    
-//   }
-// }
 function showType(busType) {
   // Get the icon element
   var infoIcon = event.target;
@@ -551,7 +540,7 @@ function showType(busType) {
   // Hide the info after  seconds 
   setTimeout(function () {
       infoType.style.display = 'none';
-  }, 11000);
+  }, 1500);
 }
 
 function showData(){
