@@ -477,10 +477,10 @@ STC Transportation, a leading player in Ghana's transport sector, is synonymous 
           <li>Bus C - Price:	&#8373;70<span class="i-info" onclick="showType('First-Class')" id="info-list-3"><i class="fas fa-info-circle"></i></span><button type="button" class="btn" onclick="showForm('form3Container','form2Container')">Select Bus C</button></li>
         </ul> -->
         <div class="info-type"></div>
-        <ul>
-          <li>Bus A - Price: &#8373;50<span class="i-info" onclick="showType('Economic')" id="info-list-1"><i class="fas fa-info-circle"></i></span><button type="button" class="btn" onclick="showForm('form3Container','form2Container')">Select Bus A</button></li>
-          <li>Bus B - Price: &#8373;60<span class="i-info" onclick="showType('Comfort')" id="info-list-2" ><i class="fas fa-info-circle"></i></span><button type="button" class="btn" onclick="showForm('form3Container','form2Container')">Select Bus B</button></li>
-          <li>Bus C - Price: &#8373;70<span class="i-info" onclick="showType('First-Class')" id="info-list-3"><i class="fas fa-info-circle"></i></span><button type="button" class="btn" onclick="showForm('form3Container','form2Container')">Select Bus C</button></li>
+        <ul >
+          <li id="for-fare" value="50">Bus A - Price: &#8373;50<span class="i-info" onclick="showType('Economic')" id="info-list-1"><i class="fas fa-info-circle"></i></span><button type="button" class="btn" onclick="showForm('form3Container','form2Container')" >Select Bus A</button></li>
+          <li id="for-fare" value="60">Bus B - Price: &#8373;60<span class="i-info" onclick="showType('Comfort')" id="info-list-2" ><i class="fas fa-info-circle"></i></span><button type="button" class="btn" onclick="showForm('form3Container','form2Container')" >Select Bus B</button></li>
+          <li id="for-fare" value="70">Bus C - Price: &#8373;70<span class="i-info" onclick="showType('First-Class')" id="info-list-3"><i class="fas fa-info-circle"></i></span><button type="button" class="btn" onclick="showForm('form3Container','form2Container')" >Select Bus C</button></li>
       </ul>
       
           <!-- <button type="button" class="btn" onclick="showForm('form3Container','form2Container')">Next step →</button> -->
@@ -498,10 +498,10 @@ STC Transportation, a leading player in Ghana's transport sector, is synonymous 
         <h2><p>Select your seats:</p> </h2>
         
         <select id="selected-seats" multiple>
-        <option value="1A">1A(window)</option>
-        <option value="1B">1B(Aisle)</option>
-        <option value="2A">2A(window)</option>
-        <option value="2B">2B(Aisle)</option>
+        <option value="1A(window)">1A(window)</option>
+        <option value="1B(Aisle)">1B(Aisle)</option>
+        <option value="2A(window)">2A(window)</option>
+        <option value="2B(Aisle)">2B(Aisle)</option>
         <!-- Add more seat options -->
         </select>
         <div class="btn-box">
@@ -586,7 +586,7 @@ STC Transportation, a leading player in Ghana's transport sector, is synonymous 
             <tr class="r1"style="font-weight: bold;
                        color:black; ">
                 <td class="d1" >Fare(GHS):</td>
-                <td class="d1" >60</td>
+                <td class="d1" id="for-faretype"></td>
             </tr>
                   
          </table>
@@ -670,6 +670,8 @@ STC Transportation, a leading player in Ghana's transport sector, is synonymous 
  console.log(TicketsNumber);
  const Seattype= document.getElementById('selected-seats').value;
  console.log(Seattype);
+ const Fare= document.getElementById('for-fare').value;
+ console.log(Fare);
 
 
 
@@ -681,6 +683,7 @@ STC Transportation, a leading player in Ghana's transport sector, is synonymous 
  document.getElementById('departuretime').innerText= timeOfDeparture ;
  document.getElementById('No_tickets').innerText= TicketsNumber;
  document.getElementById('seattype').innerText= Seattype;
+ document.getElementById('for-faretype').innerText= Fare;
 
       }
        // Capture data from the current form
