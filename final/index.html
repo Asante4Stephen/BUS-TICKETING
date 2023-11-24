@@ -63,7 +63,7 @@
         </h1>
         <h4>A simpler traveling experience for a simpler life <br>
         Buy tickets from the Transport Services of your choice</h4>
-        <button class="btn--text btn--scroll-to">Learn more &DownArrow;</button>
+        <button class="btn--text btn--scroll-to" onclick="showCompanies()" id="companies">Learn more &DownArrow;</button>
         <img
           src="pics/bus1.png"
           class="header__img"
@@ -318,7 +318,7 @@ STC Transportation, a leading player in Ghana's transport sector, is synonymous 
                 <textarea name="Message" placeholder="Leave your message here..."></textarea>
             </div>
             <div class="button">
-              <input type="button" value="Send Now" >
+              <input type="button" value= "Send Now" >
             </div>
           </form>
         </div>
@@ -401,33 +401,33 @@ STC Transportation, a leading player in Ghana's transport sector, is synonymous 
       </h2>
         <form class="modal__form">
           <label>Transport Company <span2>*</span2></label>
-          <select name="companies" id="companies">
-            <option value="stc">STC Transports</option>
-            <option value="vip">VIP Transports</option>
-            <option value="2mexp" >2M Express</option>
+          <select name="companies" id="transportProvider">
+            <option value="STC">STC Transports</option>
+            <option value="VIP">VIP Transports</option>
+            <option value="2MEXP" >2M Express</option>
           </select>
 
           <label>Full Name <span2>*</span2></label>
-          <input type="text" id="fullName" required>
+          <input type="text" id="user_fullName" required>
           
           <label>Traveling From<span2>*</span2></label>
-          <select name="travelingFrom" id="travelingFrom" aria-placeholder="WHERE TO">
-            <option value="accra">ACCRA</option>
-            <option value="tema">TEMA</option>
-            <option value="takoradi" >TAKORADI</option>
-            <option value="kumasi" >KUMASI</option>
-            <option value="sunyani" >SUNYANI</option>
-            <option value="capecoast" >CAPE COAST</option>
+          <select name="travelingFrom" id="user_destinationFrom" placeholder="Where to">
+            <option value="Accra">ACCRA</option>
+            <option value="Tema">TEMA</option>
+            <option value="Takoradi" >TAKORADI</option>
+            <option value="Kumasi" >KUMASI</option>
+            <option value="Sunyani" >SUNYANI</option>
+            <option value="Capecoast" >CAPE COAST</option>
           </select>
 
           <label>Traveling To <span2>*</span2></label>
-          <select name="travelingto" id="travelingto">
-            <option value="accra">ACCRA</option>
-            <option value="tema">TEMA</option>
-            <option value="takoradi" >TAKORADI</option>
-            <option value="kumasi" >KUMASI</option>
-            <option value="sunyani" >SUNYANI</option>
-            <option value="capecoast" >CAPE COAST</option>
+          <select name="Tavelingto" id="user_destinationTo">
+            <option value="Accra">ACCRA</option>
+            <option value="Tema">TEMA</option>
+            <option value="Takoradi">TAKORADI</option>
+            <option value="Kumasi">KUMASI</option>
+            <option value="Sunyani">SUNYANI</option>
+            <option value="CapeCoast">CAPE COAST</option>
           </select>
           <!-- <input list="locations" name="browser" id="location" required>
       
@@ -441,19 +441,20 @@ STC Transportation, a leading player in Ghana's transport sector, is synonymous 
             
           </datalist> -->
           <label>Number of Tickets <span2>*</span2></label>
-          <input type="number" id="passenger" required>
+          <input type="number" min="1" max="100" id="No_Tickets" required>
           <label>Departure Date <span2>*</span2></label>
           <input type="date" id="depDate" required>
           <label>Departure Time <span2>*</span2></label>
-          <select name="depTime" id="depTime">
-            <option value="t1">8:00AM</option>
-            <option value="t2">10:00AM</option>
-            <option value="t3">11:00AM</option>
-            <option value="t4">12:00PM</option>
-            <option value="t5">1:00PM</option>
-            <option value="t6">2:00PM</option>
-            <option value="t6">4:00PM</option>
-            <option value="t6">5:00PM</option>
+
+          <select name="depTime" id="departureTime">
+            <option value="8:00AM">8:00AM</option>
+            <option value="10:00AM">10:00AM</option>
+            <option value="11:00AM">11:00AM</option>
+            <option value="12:00PM">12:00PM</option>
+            <option value="1:00PM">1:00PM</option>
+            <option value="2:00PM">2:00PM</option>
+            <option value="4:00PM">4:00PM</option>
+            <option value="5:00PM">5:00PM</option>
           </select>
           <!-- <input type="time" id="depTime" required> -->
           <!-- <button type="button" onClick="searchBuses()" id="saveButton">Search Buses</button> -->
@@ -505,7 +506,7 @@ STC Transportation, a leading player in Ghana's transport sector, is synonymous 
         </select>
         <div class="btn-box">
           <button id="prev2" type="button" class="btn btn-default btn-prev">←Prev</button>
-          <button type="button" class="btn" onclick="showForm('form4Container','form3Container')">Next step →</button>  
+          <button type="button" class="btn" onclick="showForm('form4Container','form3Container',)">Next step →</button>  
         </div>
     </form>
   </div>
@@ -524,16 +525,15 @@ STC Transportation, a leading player in Ghana's transport sector, is synonymous 
         </select>
         <div class="btn-box">
           <button id="prev3" type="button" class="btn btn-default btn-prev">←Prev</button>
-          <button type="button" class="btn" onclick="showForm('form5Container','form4Container'); showData()">Next step →</button>
+          <button type="button" class="btn" onclick="showForm('form5Container','form4Container')">Next step →</button>
         </div>  <!-- <button type="button" class="btn" onclick="confirmBooking('')"">Next step →</button> -->
       </form>
   </div>
     <div id="form5Container" style="display: none;">
       <!-- <button class="btn--close-modal">&times;</button> -->
-      <h2 class="modal__header">
+      <h2 class="modal__header" >
        Confirma<span class="highlight">tion</span>
       </h2>
-
       <form class="modal__form" id="confirmation'">
       <div class="tablediv">
         <table border=1 width=300 height=250 id="customer-details"
@@ -543,41 +543,47 @@ STC Transportation, a leading player in Ghana's transport sector, is synonymous 
                 <th colspan='2'>Customer Details</th>
             </tr>
             <tr class="r1" style="font-weight: bold;
+            color:black; ">
+               <td class="d1">Transport Service:</td>
+               <td class="d1" id="transportprovider"></td>
+          </tr>
+            <tr  style="font-weight: bold;
                        color:black;">
-                <td class="d1">Full Name:</td>
-                <td class="d1" id="user_fullname">${userData.fullname}</td>
+                <td >Full Name:</td>
+                <td id="user_fullname"></td>
                 </tr>            
+            <tr class="r1"style="font-weight:bold;
+                       color:black; ">
+                <td class="d1">Travelling From:</td>
+                <td class="d1" id="user_destinationfrom"></td>
+                </tr>
             <tr style="font-weight: bold;
                        color:black; ">
-                <td>Destination:</td>
-                <td id="" >${userData.location}</td>
+                <td>Travelling To:</td>
+                <td id="user_destinationto" ></td>
                 </tr>
             <tr class="r1" style="font-weight: bold;
                        color:black; ">
                 <td class="d1">Date of Departure:</td>
-                <td class="d1" id="">${userData.depDate}</td>
+                <td class="d1" id="departuredate"></td>
             </tr>
             <tr style="font-weight: bold;
                        color:black; ">
                 <td>Time of Departure:</td>
-                <td id="">${userData.depTime}</td>
+                <td id="departuretime"></td>
             </tr>
-            <tr class="r1" style="font-weight: bold;
+   
+            <tr  class="r1" style="font-weight: bold;
                        color:black; ">
-                <td class="d1">Transport Service:</td>
-                <td class="d1" id="">${userData.companies}</td>
+                <td class="d1">Number of Tickets:</td>
+                <td class="d1" id="No_tickets"></td>
             </tr>
             <tr style="font-weight: bold;
                        color:black; ">
-                <td>Tickets number:</td>
-                <td id="">${userData.par1ssenger}</td>
+                <td >Fare(GHS):</td>
+                <td >60</td>
             </tr>
-            <tr class="r1" style="font-weight: bold;
-                       color:black; ">
-                <td class="d1">Fare(GHS):</td>
-                <td class="d1">60</td>
-            </tr>
-            
+                  
          </table>
       </div>
     </form>
@@ -640,21 +646,46 @@ STC Transportation, a leading player in Ghana's transport sector, is synonymous 
       function showForm(showEl="", hideEl="") {
           document.getElementById(hideEl).style.display = 'none';
           document.getElementById(showEl).style.display = 'block';
-      
+      if(showEl == "form5Container"){
+          console.log(1);
+          const transportService= document.getElementById('transportProvider').value;
+          console.log(transportService);
+ const fullName = document.getElementById('user_fullName').value;
+ console.log(fullName);
+ const travelingFrom = document.getElementById('user_destinationFrom').value;
+ console.log(travelingFrom);
+ const travelingTo = document.getElementById('user_destinationTo').value;
+ console.log(travelingTo);
+ const dateOfDeparture = document.getElementById('depDate').value;
+ console.log(dateOfDeparture);
+ const timeOfDeparture = document.getElementById('departureTime').value;
+ console.log(timeOfDeparture);
+ const TicketsNumber= document.getElementById('No_Tickets').value;
+ console.log(TicketsNumber);
+
+ document.getElementById('transportprovider').innerText= transportService;
+ document.getElementById('user_fullname').innerText= fullName;
+ document.getElementById('user_destinationfrom').innerText= travelingFrom ;
+ document.getElementById('user_destinationto').innerText= travelingTo;
+ document.getElementById('departuredate').innerText= dateOfDeparture ;
+ document.getElementById('departuretime').innerText= timeOfDeparture ;
+ document.getElementById('No_tickets').innerText= TicketsNumber;
+
+      }
        // Capture data from the current form
-    var currentForm = document.getElementById(currentFormId).querySelector("form");
-    var inputs = currentForm.getElementsByTagName("input");
-    var selects = currentForm.getElementsByTagName("select");
+    // var currentForm = document.getElementById(currentFormId).querySelector("form");
+    // var inputs = currentForm.getElementsByTagName("input");
+    // var selects = currentForm.getElementsByTagName("select");
 
-     // Store input values in the formData object
-     for (var i = 0; i < inputs.length; i++) {
-      formData[inputs[i].id] = inputs[i].value;
-    }
-
-    for (var i = 0; i < selects.length; i++) {
-      formData[selects[i].id] = selects[i].value;
-    }
-
+    //  // Store input values in the formData object
+    //  for (var i = 0; i < inputs.length; i++) {
+    //   formData[inputs[i].id] = inputs[i].value;
+    // }
+    
+    // for (var i = 0; i < selects.length; i++) {
+    //   formData[selects[i].id] = selects[i].value;
+    // }
+    showData()
       
       
         }

@@ -8,8 +8,7 @@ function searchBuses() {
     const passenger = document.getElementById('passenger').value;
     const depDate = document.getElementById('depDate').value;
     const depTime = document.getElementById('depTime').value;
-    console.log(location)
-
+    console.log(location) 
     // Perform an API request to get bus data and display results
     // You'd typically connect to a server for this.
     window.location.href="busSearchResults.html"

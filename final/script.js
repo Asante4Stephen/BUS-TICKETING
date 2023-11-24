@@ -508,6 +508,7 @@ window.addEventListener('beforeunload', function (e) {
 });
 */
 
+// this is to highlight a visited section on the page
 function changeColor(n){
   for (let index = 0; index < 5; index++) {
     const element = document.getElementById(`Link-${index}`);
@@ -540,9 +541,39 @@ function showType(busType) {
   // Hide the info after  seconds 
   setTimeout(function () {
       infoType.style.display = 'none';
-  }, 1500);
+  }, 10000);
 }
 
 function showData(){
-  document.getElementById('user_fullname')
+   
+ const transportService= document.getElementById('transportProvider').value;
+ const fullName = document.getElementById('user_fullName').value;
+ const travelingFrom = document.getElementById('user_destinationFrom').value;
+ const travelingTo = document.getElementById('user_destinationTo').value;
+ const dateOfDeparture = document.getElementById('departureDate').value;
+ const timeOfDeparture = document.getElementById('departureTime').value;
+ const TicketsNumber= document.getElementById('No_Tickets').value;
+
+ document.getElementById('transportprovider').innerText= transportService;
+ document.getElementById('user_fullname').innerText= fullName;
+ document.getElementById('user_destinationfrom').innerText= travelingFrom ;
+ document.getElementById('user_destinationto').innerText= travelingTo;
+ document.getElementById('departuredate').innerText= dateOfDeparture ;
+ document.getElementById('departuretime').innerText= timeOfDeparture ;
+ document.getElementById('No_tickets').innerText= TicketsNumber ;
+
 }
+
+
+
+//     const formData = {
+//         transportService:transportProvider,
+//         fullName:user_fullName,
+//         travelingFrom:user_destinationFrom,
+//         travelingTo:user_destinationTo,
+//         dateOfDeparture:departureDate,
+//         timeOfDeparture:departureTime,
+//         TicketsNumber: No_Tickets,
+//     }
+    
+
