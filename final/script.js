@@ -554,6 +554,8 @@ function showData(){
  const timeOfDeparture = document.getElementById('departureTime').value;
  const TicketsNumber= document.getElementById('No_Tickets').value;
 
+
+ 
  document.getElementById('transportprovider').innerText= transportService;
  document.getElementById('user_fullname').innerText= fullName;
  document.getElementById('user_destinationfrom').innerText= travelingFrom ;

@@ -572,16 +572,21 @@ STC Transportation, a leading player in Ghana's transport sector, is synonymous 
                 <td>Time of Departure:</td>
                 <td id="departuretime"></td>
             </tr>
-   
-            <tr  class="r1" style="font-weight: bold;
+            <tr class="r1" style="font-weight: bold;
                        color:black; ">
-                <td class="d1">Number of Tickets:</td>
-                <td class="d1" id="No_tickets"></td>
+                <td td class="d1">Seat type:</td>
+                <td td class="d1" id="seattype"></td>
             </tr>
+                  
             <tr style="font-weight: bold;
                        color:black; ">
-                <td >Fare(GHS):</td>
-                <td >60</td>
+                <td >Number of Tickets:</td>
+                <td  id="No_tickets"></td>
+            </tr>
+            <tr class="r1"style="font-weight: bold;
+                       color:black; ">
+                <td class="d1" >Fare(GHS):</td>
+                <td class="d1" >60</td>
             </tr>
                   
          </table>
@@ -650,6 +655,7 @@ STC Transportation, a leading player in Ghana's transport sector, is synonymous 
           console.log(1);
           const transportService= document.getElementById('transportProvider').value;
           console.log(transportService);
+
  const fullName = document.getElementById('user_fullName').value;
  console.log(fullName);
  const travelingFrom = document.getElementById('user_destinationFrom').value;
@@ -662,6 +668,10 @@ STC Transportation, a leading player in Ghana's transport sector, is synonymous 
  console.log(timeOfDeparture);
  const TicketsNumber= document.getElementById('No_Tickets').value;
  console.log(TicketsNumber);
+ const Seattype= document.getElementById('selected-seats').value;
+ console.log(Seattype);
+
+
 
  document.getElementById('transportprovider').innerText= transportService;
  document.getElementById('user_fullname').innerText= fullName;
@@ -670,6 +680,7 @@ STC Transportation, a leading player in Ghana's transport sector, is synonymous 
  document.getElementById('departuredate').innerText= dateOfDeparture ;
  document.getElementById('departuretime').innerText= timeOfDeparture ;
  document.getElementById('No_tickets').innerText= TicketsNumber;
+ document.getElementById('seattype').innerText= Seattype;
 
       }
        // Capture data from the current form
@@ -685,11 +696,15 @@ STC Transportation, a leading player in Ghana's transport sector, is synonymous 
     // for (var i = 0; i < selects.length; i++) {
     //   formData[selects[i].id] = selects[i].value;
     // }
-    showData()
+    
+    
+
+    showData();
       
       
         }
-  console.log(formData);
+        
+  
 
 
       // function submitForm(formId) {
