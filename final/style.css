@@ -951,9 +951,9 @@ textarea#area{
    transition: 0.2s;
 }
 
-.d1{
+/* .d1{
   color:#3c697a; 
-}
+} */
 
 .tablediv{
   text-align: center;
@@ -963,12 +963,13 @@ textarea#area{
   position: relative;
 }
 
-.btn-box{
+/* .btn-box{
   display: flex;
   width: 100%;
-  margin: -12px 69px;
   text-align: center;
-}
+  margin-left: 167px;
+  margin-top: 35px;
+} */
 .btn-box1{
   margin: 24px 0px 0 56px;
   padding: 9px 6px;
@@ -976,9 +977,11 @@ textarea#area{
 
 .btn-box4{
   display: flex;
-  margin: 24px 0px 0 -2px;
-  padding: 9px 6px;
-  gap: 120px;
+  width: 100%;
+  text-align: center;
+  margin-left: 150px;
+  margin-top: 35px;
+ 
 }
 span2{
   color:red;
@@ -1003,4 +1006,19 @@ span2{
   color: #fff;
   opacity: 1;
   transform: 2s;
+}
+
+.btn-box3,.btn-box2{
+  display: flex;
+  width: 100%;
+  text-align: center;
+  margin-left: 200px;
+  margin-top: 35px;
+}
+.btn-box0{
+  display: flex;
+  width: 100%;
+  text-align: center;
+  margin-left: 1px;
+  margin-top: 35px;
 }
