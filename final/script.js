@@ -555,11 +555,6 @@ function showData(){
  const TicketsNumber= document.getElementById('No_Tickets').value;
 
 
-<<<<<<< HEAD
-
-=======
- 
->>>>>>> 1c93448dd8fe9099a08fe245a4f95dcc546cd17f
  document.getElementById('transportprovider').innerText= transportService;
  document.getElementById('user_fullname').innerText= fullName;
  document.getElementById('user_destinationfrom').innerText= travelingFrom ;
