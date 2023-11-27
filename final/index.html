@@ -199,7 +199,7 @@ STC Transportation, a leading player in Ghana's transport sector, is synonymous 
       <div class="section__title section__title--testimonials">
         <h2 class="section__description">Not sure yet?</h2>
         <h3 class="section__header">
-          Millions of Pers Ticketings are already making their lifes simpler.
+          Millions of our customers are already making their lifes simpler.
         </h3>
       </div>
 
@@ -288,8 +288,7 @@ STC Transportation, a leading player in Ghana's transport sector, is synonymous 
             <div class="address details">
               <i class="fas fa-map-marker-alt"></i>
               <div class="topic">Address</div>
-              <div class="text-one">#</div>
-              <div class="text-two">#</div>
+              <div class="text-one">3 DODI link,Accra</div>
             </div>
             <div class="phone details">
               <i class="fas fa-phone-alt"></i>
@@ -396,8 +395,8 @@ STC Transportation, a leading player in Ghana's transport sector, is synonymous 
     <div id="form1Container">
       <button class="btn--close-modal">&times;</button>
       <h2 class="modal__header">
-        Book a Ticket <br />
-        in just some <span class="highlight">seconds</span>
+        Book a ticket 
+         <span class="highlight">now</span>
       </h2>
         <form class="modal__form">
           <label>Transport Company <span2>*</span2></label>
@@ -498,11 +497,16 @@ STC Transportation, a leading player in Ghana's transport sector, is synonymous 
         <h2><p>Select your seats:</p> </h2>
         
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 1c93448dd8fe9099a08fe245a4f95dcc546cd17f
         <select id="selected-seats" single style="background-color: rgba(67, 103, 181, 0.422);">
         <option value="1A">1A(window)</option>
         <option value="1B">1B(Aisle)</option>
         <option value="2A">2A(window)</option>
         <option value="2B">2B(Aisle)</option>
+<<<<<<< HEAD
 =======
         <select id="selected-seats" multiple>
         <option value="1A(window)">1A(window)</option>
@@ -510,6 +514,9 @@ STC Transportation, a leading player in Ghana's transport sector, is synonymous 
         <option value="2A(window)">2A(window)</option>
         <option value="2B(Aisle)">2B(Aisle)</option>
 >>>>>>> 825266b0c1f900a6b7408878dc827c09dd174715
+=======
+
+>>>>>>> 1c93448dd8fe9099a08fe245a4f95dcc546cd17f
         <!-- Add more seat options -->
         </select>
         <div class="btn-box">
@@ -548,7 +555,7 @@ STC Transportation, a leading player in Ghana's transport sector, is synonymous 
          >
             <tr class="r1" style="background-color:#0671f4;
                        color: #fff">
-                <th colspan='2'>Customer Details</th>
+                <th colspan='2'>Ticket Details</th>
             </tr>
             <tr class="r1" style="font-weight: bold;
             color:black; ">
@@ -582,7 +589,11 @@ STC Transportation, a leading player in Ghana's transport sector, is synonymous 
             </tr>
             <tr class="r1" style="font-weight: bold;
                        color:black; ">
+<<<<<<< HEAD
                 <td td class="d1">Seat type:</td>
+=======
+                <td td class="d1">Seat Type:</td>
+>>>>>>> 1c93448dd8fe9099a08fe245a4f95dcc546cd17f
                 <td td class="d1" id="seattype"></td>
             </tr>
                   
@@ -595,6 +606,14 @@ STC Transportation, a leading player in Ghana's transport sector, is synonymous 
                        color:black; ">
                 <td class="d1" >Fare(GHS):</td>
                 <td class="d1" id="for-faretype"></td>
+<<<<<<< HEAD
+=======
+            </tr>
+            <tr class="r1"style="font-weight: bold;
+                       color:black; ">
+                <td class="d1" >Ticket Number:</td>
+                <td class="d1" id="for-faretype">17845818</td>
+>>>>>>> 1c93448dd8fe9099a08fe245a4f95dcc546cd17f
             </tr>
                   
          </table>
@@ -678,8 +697,13 @@ STC Transportation, a leading player in Ghana's transport sector, is synonymous 
  console.log(TicketsNumber);
  const Seattype= document.getElementById('selected-seats').value;
  console.log(Seattype);
+<<<<<<< HEAD
  const Fare= document.getElementById('for-fare').value;
  console.log(Fare);
+=======
+ const fare= document.querySelectorAll('for-fare').value;
+ console.log(fare);
+>>>>>>> 1c93448dd8fe9099a08fe245a4f95dcc546cd17f
 
 
 
@@ -691,7 +715,11 @@ STC Transportation, a leading player in Ghana's transport sector, is synonymous 
  document.getElementById('departuretime').innerText= timeOfDeparture ;
  document.getElementById('No_tickets').innerText= TicketsNumber;
  document.getElementById('seattype').innerText= Seattype;
+<<<<<<< HEAD
  document.getElementById('for-faretype').innerText= Fare;
+=======
+ document.getElementById('for-faretype').value= fare;
+>>>>>>> 1c93448dd8fe9099a08fe245a4f95dcc546cd17f
 
       }
        // Capture data from the current form
