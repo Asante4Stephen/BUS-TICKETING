@@ -541,7 +541,7 @@ function showType(busType) {
   // Hide the info after  seconds 
   setTimeout(function () {
       infoType.style.display = 'none';
-  }, 10000);
+  }, 3000);
 }
 
 function showData(){
@@ -555,7 +555,6 @@ function showData(){
  const TicketsNumber= document.getElementById('No_Tickets').value;
 
 
- 
  document.getElementById('transportprovider').innerText= transportService;
  document.getElementById('user_fullname').innerText= fullName;
  document.getElementById('user_destinationfrom').innerText= travelingFrom ;

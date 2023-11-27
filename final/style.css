@@ -858,16 +858,8 @@ select{
   transition: all 0.3s ease;
 }
 .button input[type="button"]:hover{
-  background: #c4df29;
+  opacity: 0.5;
 }
-
-.button input[type="button"]:active{
-    background: #0c659c;
-    opacity: 0.5;
-    
-  }
-  
-
 
 @media (max-width: 950px) {
   .container{
@@ -946,10 +938,6 @@ textarea#area{
  
 }
 
-.r1:hover{
-   font-size: 120%;
-   transition: 0.2s;
-}
 
 /* .d1{
   color:#3c697a; 
