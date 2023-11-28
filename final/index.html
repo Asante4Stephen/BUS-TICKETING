@@ -350,44 +350,6 @@ STC Transportation, a leading player in Ghana's transport sector, is synonymous 
       
       <div class="modal hidden">
        
-        <!-- <form class="modal__form">
-          <label>Full Name <span2>*</span2></label>
-          <input type="text" id="fullName" required>
-          <label>Company <span2>*</span2></label>
-          <input list="browsers" name="browser" id="companies"required>
-      
-            <datalist id="browsers">
-            <option value=" STC Transports">
-            <option value="VIP Transports">
-            <option value="VVIP Transports">
-            <option value="2M Express Transports">
-            <option value="FORD Transports">
-            
-            </datalist>
-          <label>Location <span2>*</span2></label>
-          <input list="locations" name="browser" id="location" required>
-      
-          <datalist id="locations">
-            <option value="ACCRA">
-            <option value="TEMA">
-            <option value="TAKORADI">
-            <option value="KUMASI">
-            <option value="SUNYANI">
-            <option value="CAPE COAST">
-            
-          </datalist>
-          <label>Passengers <span2>*</span2></label>
-          <input type="number" id="passenger" required>
-          <label>Date <span2>*</span2></label>
-          <input type="date" id="depDate" required>
-          <label>Departure Time <span2>*</span2></label>
-          <input type="time" id="depTime" required>
-          
-         <!-- <button type="button" onClick="searchBuses()" id="saveButton">Search Buses</button>
-         -->
-         <!-- <a href="#bus-search-results show-modal"><button type="button" class="btn">Search Buses</button></a> -->
-        <!-- </form> -->  
-         
     <div id="form1Container">
       <button class="btn--close-modal">&times;</button>
       <h2 class="modal__header">
@@ -397,9 +359,9 @@ STC Transportation, a leading player in Ghana's transport sector, is synonymous 
         <form class="modal__form">
           <label>Transport Company <span2>*</span2></label>
           <select name="companies" id="transportProvider">
-            <option value="STC">STC Transports</option>
-            <option value="VIP">VIP Transports</option>
-            <option value="2MEXP" >2M Express</option>
+            <option value="STC Transport">STC Transports</option>
+            <option value="VIP Transport">VIP Transports</option>
+            <option value="2M Express Transport" >2M Express</option>
           </select>
 
           <label>Full Name <span2>*</span2></label>
@@ -438,7 +400,7 @@ STC Transportation, a leading player in Ghana's transport sector, is synonymous 
           <label>Number of Tickets <span2>*</span2></label>
           <input type="number" min="1" max="100" id="No_Tickets" required>
           <label>Departure Date <span2>*</span2></label>
-          <input type="date" id="depDate" min="2023-11-27"  required>
+          <input type="date" id="depDate" min="2023-11-28"  required>
           <label>Departure Time <span2>*</span2></label>
 
           <select name="depTime" id="departureTime">
@@ -451,8 +413,6 @@ STC Transportation, a leading player in Ghana's transport sector, is synonymous 
             <option value="4:00PM">4:00PM</option>
             <option value="5:00PM">5:00PM</option>
           </select>
-          <!-- <input type="time" id="depTime" required> -->
-          <!-- <button type="button" onClick="searchBuses()" id="saveButton">Search Buses</button> -->
         </form>
         <!-- <button class="btn" onClick="searchBuses()">Next step →</button> -->
         <div class="btn-box1">
@@ -536,7 +496,7 @@ STC Transportation, a leading player in Ghana's transport sector, is synonymous 
             </tr>
             <tr class="r1" style="font-weight: bold;
             color:black; ">
-               <td class="d1">Transport Service:</td>
+               <td class="d1">Transport Company:</td>
                <td class="d1" id="transportprovider"></td>
           </tr>
             <tr  style="font-weight: bold;
@@ -584,7 +544,7 @@ STC Transportation, a leading player in Ghana's transport sector, is synonymous 
             <tr style="font-weight: bold;
                        color:black; ">
                 <td  >Ticket Number:</td>
-                <td >17845818</td>
+                <td id="ticketid"></td>
 
             </tr>
                   
@@ -675,11 +635,16 @@ STC Transportation, a leading player in Ghana's transport sector, is synonymous 
  const Fare= document.getElementById('for-fare').value * document.getElementById('No_Tickets').value;
  console.log(Fare);
 
-// =======
-//  const fare= document.querySelectorAll('for-fare').value;
-//  console.log(fare);
-// >>>>>>> 1c93448dd8fe9099a08fe245a4f95dcc546cd17f
+ function getRandomNumericId(length) {
+  let id = "";
+  for (let i = 0; i < length; i++) {
+    id += Math.floor(Math.random() * 10);
+  }
+  return id;
+}
 
+let id = getRandomNumericId(5);
+console.log(id);
 
  document.getElementById('transportprovider').innerText= transportService;
  document.getElementById('user_fullname').innerText= fullName;
@@ -691,6 +656,8 @@ STC Transportation, a leading player in Ghana's transport sector, is synonymous 
  document.getElementById('seattype').innerText= Seattype;
 
  document.getElementById('for-faretype').innerText= Fare;
+ document.getElementById('ticketid').innerText= id;
+
 
 
       }
@@ -725,6 +692,8 @@ STC Transportation, a leading player in Ghana's transport sector, is synonymous 
       //     document.getElementById('form1Container').style.display = 'block';
 
       // } 
+   
+console.log(getRandomNumber)
 
       function printFunc(){
         const temp = document.getElementById("customer-details")
