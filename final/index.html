@@ -473,9 +473,9 @@ STC Transportation, a leading player in Ghana's transport sector, is synonymous 
         </ul> -->
         <div  class="info-type"></div>
         <ul >
-          <li id="for-fare" value="50">Bus A - Price: &#8373;50<span class="i-info" onclick="showType('Economic')" id="info-list-1"><i class="fas fa-info-circle"></i></span><button type="button" class="btn" onclick="showForm('form3Container','form2Container')" >Select Bus A</button></li>
+          <li  value="50">Bus A - Price: &#8373;50<span class="i-info" onclick="showType('Economic')" id="info-list-1"><i class="fas fa-info-circle"></i></span><button type="button" class="btn" onclick="showForm('form3Container','form2Container')" >Select Bus A</button></li>
           <li id="for-fare" value="60">Bus B - Price: &#8373;60<span class="i-info" onclick="showType('Comfort')" id="info-list-2" ><i class="fas fa-info-circle"></i></span><button type="button" class="btn" onclick="showForm('form3Container','form2Container')" >Select Bus B</button></li>
-          <li id="for-fare" value="70">Bus C - Price: &#8373;70<span class="i-info" onclick="showType('First-Class')" id="info-list-3"><i class="fas fa-info-circle"></i></span><button type="button" class="btn" onclick="showForm('form3Container','form2Container')" >Select Bus C</button></li>
+          <li value="70">Bus C - Price: &#8373;70<span class="i-info" onclick="showType('First-Class')" id="info-list-3"><i class="fas fa-info-circle"></i></span><button type="button" class="btn" onclick="showForm('form3Container','form2Container')" >Select Bus C</button></li>
       </ul>
       
           <!-- <button type="button" class="btn" onclick="showForm('form3Container','form2Container')">Next step →</button> -->
@@ -529,8 +529,7 @@ STC Transportation, a leading player in Ghana's transport sector, is synonymous 
       </h2>
       <form class="modal__form" id="confirmation'">
       <div class="tablediv">
-        <table border=1 width=300 height=250 id="customer-details"
-         >
+        <table border=1 width=300 height=250 id="customer-details">
             <tr class="r1" style="background-color:#0671f4;
                        color: #fff">
                 <th colspan='2'>Ticket Details</th>
@@ -594,7 +593,7 @@ STC Transportation, a leading player in Ghana's transport sector, is synonymous 
     </form>
     <div class="btn-box4"> 
       <button id="prev4" type="button" class="btn btn-default btn-prev">←Prev</button>
-      <button class="btn" onclick="print()" id="printButton">Print Ticket</button>
+      <button class="btn" onclick="printFunc()" id="printButton">Print Ticket</button>
   </div>
       </div>
       <!-- <button type="button" class="btn" onclick="confirmBooking('')"">Next step →</button> -->
@@ -673,7 +672,7 @@ STC Transportation, a leading player in Ghana's transport sector, is synonymous 
  console.log(TicketsNumber);
  const Seattype= document.getElementById('selected-seats').value;
  console.log(Seattype);
- const Fare= document.getElementById('for-fare').value;
+ const Fare= document.getElementById('for-fare').value * document.getElementById('No_Tickets').value;
  console.log(Fare);
 
 // =======
@@ -690,7 +689,10 @@ STC Transportation, a leading player in Ghana's transport sector, is synonymous 
  document.getElementById('departuretime').innerText= timeOfDeparture ;
  document.getElementById('No_tickets').innerText= TicketsNumber;
  document.getElementById('seattype').innerText= Seattype;
- document.getElementById('for-faretype').innerText= Fare ;
+
+ document.getElementById('for-faretype').innerText= Fare;
+
+
       }
        // Capture data from the current form
     // var currentForm = document.getElementById(currentFormId).querySelector("form");
@@ -723,6 +725,15 @@ STC Transportation, a leading player in Ghana's transport sector, is synonymous 
       //     document.getElementById('form1Container').style.display = 'block';
 
       // } 
+
+      function printFunc(){
+        const temp = document.getElementById("customer-details")
+
+        const temp2 = document.innerHTML
+
+        document.innerHTML = temp
+        window.print()
+      }
 
   </script>
 
