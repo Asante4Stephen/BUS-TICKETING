@@ -135,7 +135,9 @@ STC Transportation, a leading player in Ghana's transport sector, is synonymous 
             2M Transportation
           </h5>
           <p>
-            2M Express is the most reliable transport service provider in Ghana today with a solid driving record of 5 years and 99.9999% safety ranking. With about 130 employees (mostly drivers), 2M transports about 1,500 people daily. The company has a strict recruitment processes and hires the best drivers at all times.
+            2M Express is the most reliable transport service provider in Ghana today with a solid driving record of 5 years and 99.9999% safety ranking.
+             With about 130 employees (mostly drivers), 2M transports about 1,500 people daily. The company has a strict recruitment processes and hires 
+             the best drivers at all times.
           </p>
         </div>
       </div>
@@ -469,7 +471,7 @@ STC Transportation, a leading player in Ghana's transport sector, is synonymous 
           <li>Bus B - Price:	&#8373;60<span class="i-info" onclick="showType('Comfort')" id="info-list-2" ><i class="fas fa-info-circle"></i></span><button type="button" class="btn" onclick="showForm('form3Container','form2Container')">Select Bus B</button></li>
           <li>Bus C - Price:	&#8373;70<span class="i-info" onclick="showType('First-Class')" id="info-list-3"><i class="fas fa-info-circle"></i></span><button type="button" class="btn" onclick="showForm('form3Container','form2Container')">Select Bus C</button></li>
         </ul> -->
-        <div class="info-type"></div>
+        <div  class="info-type"></div>
         <ul >
           <li id="for-fare" value="50">Bus A - Price: &#8373;50<span class="i-info" onclick="showType('Economic')" id="info-list-1"><i class="fas fa-info-circle"></i></span><button type="button" class="btn" onclick="showForm('form3Container','form2Container')" >Select Bus A</button></li>
           <li id="for-fare" value="60">Bus B - Price: &#8373;60<span class="i-info" onclick="showType('Comfort')" id="info-list-2" ><i class="fas fa-info-circle"></i></span><button type="button" class="btn" onclick="showForm('form3Container','form2Container')" >Select Bus B</button></li>
@@ -490,11 +492,11 @@ STC Transportation, a leading player in Ghana's transport sector, is synonymous 
       <form class="modal__form">
         <h2><p>Select your seats:</p> </h2>
 
-        <select id="selected-seats" single style="background-color: rgba(67, 103, 181, 0.422);">
-        <option value="1A">1A(window)</option>
-        <option value="1B">1B(Aisle)</option>
-        <option value="2A">2A(window)</option>
-        <option value="2B">2B(Aisle)</option>
+        <select id="selected-seats" single style="background-color: rgba(102, 142, 229, 0.422);">
+        <option value="1A(window)">1A(window)</option>
+        <option value="1B(Aisle)">1B(Aisle)</option>
+        <option value="2A(window)">2A(window)</option>
+        <option value="2B(Aisle)">2B(Aisle)</option>
         <!-- Add more seat options -->
         </select>
         <div class="btn-box3">
@@ -583,7 +585,7 @@ STC Transportation, a leading player in Ghana's transport sector, is synonymous 
             <tr style="font-weight: bold;
                        color:black; ">
                 <td  >Ticket Number:</td>
-                <td id="for-faretype">17845818</td>
+                <td >17845818</td>
 
             </tr>
                   
@@ -651,6 +653,7 @@ STC Transportation, a leading player in Ghana's transport sector, is synonymous 
           document.getElementById(showEl).style.display = 'block';
       if(showEl == "form5Container"){
           console.log(1);
+          
           const transportService= document.getElementById('transportProvider').value;
           console.log(transportService);
 
@@ -672,11 +675,11 @@ STC Transportation, a leading player in Ghana's transport sector, is synonymous 
  console.log(Seattype);
  const Fare= document.getElementById('for-fare').value;
  console.log(Fare);
+
 // =======
 //  const fare= document.querySelectorAll('for-fare').value;
 //  console.log(fare);
 // >>>>>>> 1c93448dd8fe9099a08fe245a4f95dcc546cd17f
-
 
 
  document.getElementById('transportprovider').innerText= transportService;
@@ -687,8 +690,7 @@ STC Transportation, a leading player in Ghana's transport sector, is synonymous 
  document.getElementById('departuretime').innerText= timeOfDeparture ;
  document.getElementById('No_tickets').innerText= TicketsNumber;
  document.getElementById('seattype').innerText= Seattype;
- document.getElementById('for-faretype').value= fare;
-
+ document.getElementById('for-faretype').innerText= Fare ;
       }
        // Capture data from the current form
     // var currentForm = document.getElementById(currentFormId).querySelector("form");
