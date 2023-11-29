@@ -1018,7 +1018,6 @@ span2{
   margin-left: 1px;
   margin-top: 35px;
 }
-<<<<<<< HEAD
 
 #pers-logo{
   margin-left: -220px;
@@ -1039,7 +1038,7 @@ span2{
 /* .t-head{
    padding: -5px -5px;  
 } */
-=======
+
 /* Responsive Styles */
 @media (max-width: 768px) {
   .nav {
@@ -1067,4 +1066,4 @@ span2{
     font-size: 20px;
   }
 }
->>>>>>> ac28d6c82d7ed29a8347df9d8dea2a91ff85e2ee
+
