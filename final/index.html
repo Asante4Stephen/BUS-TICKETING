@@ -403,7 +403,7 @@ STC Transportation, a leading player in Ghana's transport sector, is synonymous 
           <input type="date" id="depDate" min="2023-11-28"  required>
           <label>Departure Time <span2>*</span2></label>
 
-          <select name="depTime" id="departureTime">
+          <select name="depTime" id="departureTime" >
             <option value="8:00AM">8:00AM</option>
             <option value="10:00AM">10:00AM</option>
             <option value="11:00AM">11:00AM</option>
@@ -524,6 +524,11 @@ STC Transportation, a leading player in Ghana's transport sector, is synonymous 
                 <td>Time of Departure:</td>
                 <td id="departuretime"></td>
             </tr>
+            <tr style="font-weight: bold;
+                       color:black; ">
+                <td>Arrival Time :</td>
+                <td id="arriveTime"></td>
+            </tr>
             <tr class="r1" style="font-weight: bold;
                        color:black; ">
                 <td td class="d1">Seat Type:</td>
@@ -635,6 +640,8 @@ STC Transportation, a leading player in Ghana's transport sector, is synonymous 
  const Fare= document.getElementById('for-fare').value * document.getElementById('No_Tickets').value;
  console.log(Fare);
 
+ console.log(avT)
+
  function getRandomNumericId(length) {
   let id = "";
   for (let i = 0; i < length; i++) {
@@ -643,8 +650,42 @@ STC Transportation, a leading player in Ghana's transport sector, is synonymous 
   return id;
 }
 
+
 let id = getRandomNumericId(5);
 console.log(id);
+var departureTime = document.getElementById("departureTime").value;
+
+// Use a switch statement to calculate arrival time based on the selected departure time
+var arrivalTime;
+switch (departureTime) {
+  case "8:00AM":
+    arrivalTime = "7:00AM";
+    break;
+  case "10:00AM":
+    arrivalTime = "9:00AM";
+    break;
+  case "11:00AM":
+    arrivalTime = "10:00AM";
+    break;
+  case "12:00PM":
+    arrivalTime = "11:00AM";
+    break;
+  case "1:00PM":
+    arrivalTime = "12:00PM";
+    break;
+  case "2:00PM":
+    arrivalTime = "1:00PM";
+    break;
+  case "4:00PM":
+    arrivalTime = "3:00PM";
+    break;
+  case "5:00PM":
+    arrivalTime = "4:00PM";
+    break;
+  default:
+    arrivalTime = "Invalid departure time";
+}
+var avT = document.getElementById("arriveTime").innerText = arrivalTime;
 
  document.getElementById('transportprovider').innerText= transportService;
  document.getElementById('user_fullname').innerText= fullName;
@@ -657,6 +698,7 @@ console.log(id);
 
  document.getElementById('for-faretype').innerText= Fare;
  document.getElementById('ticketid').innerText= id;
+ document.getElementById("arriveTime").innerText = avT;
 
 
 
