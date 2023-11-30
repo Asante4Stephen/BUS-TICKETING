@@ -400,7 +400,7 @@ STC Transportation, a leading player in Ghana's transport sector, is synonymous 
           <label>Number of Tickets <span2>*</span2></label>
           <input type="number" min="1" max="100" id="No_Tickets" required>
           <label>Departure Date <span2>*</span2></label>
-          <input type="date" id="depDate" min="2023-11-28"  required>
+          <input type="date" id="depDate" min="2023-11-30"  required>
           <label>Departure Time <span2>*</span2></label>
 
           <select name="depTime" id="departureTime" >
@@ -659,28 +659,28 @@ var departureTime = document.getElementById("departureTime").value;
 var arrivalTime;
 switch (departureTime) {
   case "8:00AM":
-    arrivalTime = "7:00AM";
+    arrivalTime = "7:30AM";
     break;
   case "10:00AM":
-    arrivalTime = "9:00AM";
+    arrivalTime = "9:30AM";
     break;
   case "11:00AM":
-    arrivalTime = "10:00AM";
+    arrivalTime = "10:30AM";
     break;
   case "12:00PM":
-    arrivalTime = "11:00AM";
+    arrivalTime = "11:30AM";
     break;
   case "1:00PM":
-    arrivalTime = "12:00PM";
+    arrivalTime = "12:30PM";
     break;
   case "2:00PM":
-    arrivalTime = "1:00PM";
+    arrivalTime = "1:30PM";
     break;
   case "4:00PM":
-    arrivalTime = "3:00PM";
+    arrivalTime = "3:30PM";
     break;
   case "5:00PM":
-    arrivalTime = "4:00PM";
+    arrivalTime = "4:30PM";
     break;
   default:
     arrivalTime = "Invalid departure time";
