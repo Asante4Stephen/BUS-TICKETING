@@ -544,26 +544,26 @@ function showType(busType) {
   }, 3000);
 }
 
-function showData(){
+// function showData(){
    
- const transportService= document.getElementById('transportProvider').value;
- const fullName = document.getElementById('user_fullName').value;
- const travelingFrom = document.getElementById('user_destinationFrom').value;
- const travelingTo = document.getElementById('user_destinationTo').value;
- const dateOfDeparture = document.getElementById('departureDate').value;
- const timeOfDeparture = document.getElementById('departureTime').value;
- const TicketsNumber= document.getElementById('No_Tickets').value;
+//  const transportService= document.getElementById('transportProvider').value;
+//  const fullName = document.getElementById('user_fullName').value;
+//  const travelingFrom = document.getElementById('user_destinationFrom').value;
+//  const travelingTo = document.getElementById('user_destinationTo').value;
+//  const dateOfDeparture = document.getElementById('departureDate').value;
+//  const timeOfDeparture = document.getElementById('departureTime').value;
+//  const TicketsNumber= document.getElementById('No_Tickets').value;
 
 
- document.getElementById('transportprovider').innerText= transportService;
- document.getElementById('user_fullname').innerText= fullName;
- document.getElementById('user_destinationfrom').innerText= travelingFrom ;
- document.getElementById('user_destinationto').innerText= travelingTo;
- document.getElementById('departuredate').innerText= dateOfDeparture ;
- document.getElementById('departuretime').innerText= timeOfDeparture ;
- document.getElementById('No_tickets').innerText= TicketsNumber ;
+//  document.getElementById('transportprovider').innerText= transportService;
+//  document.getElementById('user_fullname').innerText= fullName;
+//  document.getElementById('user_destinationfrom').innerText= travelingFrom ;
+//  document.getElementById('user_destinationto').innerText= travelingTo;
+//  document.getElementById('departuredate').innerText= dateOfDeparture ;
+//  document.getElementById('departuretime').innerText= timeOfDeparture ;
+//  document.getElementById('No_tickets').innerText= TicketsNumber ;
 
-}
+// }
 
 
 
